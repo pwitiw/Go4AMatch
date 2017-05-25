@@ -1,13 +1,11 @@
 package com.witiw.go4amatch.rest.api;
 
 import com.witiw.go4amatch.AppProperties;
+import com.witiw.go4amatch.rest.sportradar.sdk.RootObject;
 
-import org.json.JSONObject;
-
-import okhttp3.ResponseBody;
-import retrofit2.Call;
-import retrofit2.http.GET;
-import retrofit2.http.Path;
+import retrofit.Call;
+import retrofit.http.GET;
+import retrofit.http.Path;
 
 
 /**
@@ -17,5 +15,5 @@ import retrofit2.http.Path;
 public interface HttpHelper {
 
     @GET("schedules/{date}/schedule." + AppProperties.DOC_TYPE + "?api_key=" + AppProperties.API_KEY)
-    Call<ResponseBody> getDailySchedule(@Path("date") String date);
+    Call<RootObject> getDailySchedule(@Path("date") String date);
 }

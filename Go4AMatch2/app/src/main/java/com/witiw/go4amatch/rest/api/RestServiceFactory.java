@@ -5,8 +5,8 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.witiw.go4amatch.AppProperties;
 
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit.GsonConverterFactory;
+import retrofit.Retrofit;
 
 
 /**

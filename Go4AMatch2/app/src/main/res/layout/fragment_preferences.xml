@@ -1,0 +1,209 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.witiw.go4amatch.ResultFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--<DatePicker-->
+            <!--android:id="@+id/dpResult"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:weightSum="6">
+            <TextView
+                android:id="@+id/tvCriterion"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="@string/criterion"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/title_font_size" />
+            <TextView
+                android:id="@+id/tvScale"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="@string/scale"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/title_font_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/criterion_height"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <TextView
+                android:id="@+id/tvBudget"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="left|center"
+                android:text="@string/budget"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/preferences_font_size" />
+
+            <SeekBar
+                android:id="@+id/sbBudget"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center"
+                android:layout_weight="3"
+                android:max="@string/max_bar_value"
+                android:progress="@string/bar_start_pos" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/criterion_height"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <TextView
+                android:id="@+id/tvAttractiveness"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="left|center"
+                android:text="@string/attractiveness"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/preferences_font_size" />
+
+            <SeekBar
+                android:id="@+id/sbAttractiveness"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center"
+                android:layout_weight="3"
+                android:max="@string/max_bar_value"
+                android:progress="@string/bar_start_pos" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/criterion_height"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <TextView
+                android:id="@+id/tvligueType"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="left|center"
+                android:text="@string/ligue_type"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/preferences_font_size" />
+
+            <SeekBar
+                android:id="@+id/sbLigueType"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center"
+                android:layout_weight="3"
+                android:max="@string/max_bar_value"
+                android:progress="@string/bar_start_pos" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/criterion_height"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <TextView
+                android:id="@+id/tvAreaAttractiveness"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="left|center"
+                android:text="@string/area_attractiveness"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/preferences_font_size" />
+
+            <SeekBar
+                android:id="@+id/sbAreaAttractiveness"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center"
+                android:layout_weight="3"
+                android:max="@string/max_bar_value"
+                android:progress="@string/bar_start_pos" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/criterion_height"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <TextView
+                android:id="@+id/tvCommunication"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="left|center"
+                android:text="@string/communication"
+                android:textColor="@color/text_color"
+
+                android:textSize="@dimen/preferences_font_size" />
+
+            <SeekBar
+                android:id="@+id/sbCommunication"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center"
+                android:layout_weight="3"
+                android:max="@string/max_bar_value"
+                android:progress="@string/bar_start_pos" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btSearch"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="70dp"
+            android:text="@string/search" />
+
+    </LinearLayout>
+
+</RelativeLayout>
