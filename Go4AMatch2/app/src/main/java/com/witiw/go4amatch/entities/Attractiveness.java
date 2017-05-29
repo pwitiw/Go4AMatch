@@ -8,6 +8,7 @@ public class Attractiveness {
     private double value;
     private String form;
     private int position;
+    private int importance;
     private boolean isDerby;
 
     public Attractiveness(double result) {
@@ -39,6 +40,14 @@ public class Attractiveness {
 
     public void setPosition(int position) {
         this.position = position;
+    }
+
+    public int getImportance() {
+        return importance;
+    }
+
+    public void setImportance(int importance) {
+        this.importance = importance;
     }
 
     public boolean isDerby() {

@@ -1,7 +1,7 @@
 package com.witiw.go4amatch.logic.classifier;
 
 
-import com.witiw.go4amatch.logic.DataReader;
+import com.witiw.go4amatch.logic.DupaReader;
 
 import weka.classifiers.Evaluation;
 import weka.classifiers.bayes.NaiveBayes;
@@ -20,7 +20,7 @@ public class BayesClassifier {
     public BayesClassifier() throws Exception {
         naiveBayes = new NaiveBayes();
         naiveBayes.setUseSupervisedDiscretization(true);
-        inscantes = DataReader.getInstancesForTrainingData();
+        inscantes = DupaReader.getInstancesForTrainingData();
         validate();
     }
 

@@ -3,14 +3,11 @@ package com.witiw.go4amatch;
 import android.app.Activity;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.ListFragment;
 import android.support.v4.view.ViewPager;
 
 import com.witiw.go4amatch.entities.SportingEvent;
 import com.witiw.go4amatch.logic.AlgorithmEnginee;
-import com.witiw.go4amatch.logic.ahp.AHPAlgorithm;
 import com.witiw.go4amatch.logic.objects.Criterion;
-import com.witiw.go4amatch.rest.IMainActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,9 +23,9 @@ public class MainPresenter implements IMainPresenter {
     AlgorithmEnginee algorithmEnginee;
 
     public MainPresenter(MainActivity activity) {
-        algorithmEnginee = new AlgorithmEnginee(this);
+        algorithmEnginee = new AlgorithmEnginee(this, activity);
         mainActivity = activity;
-       setupViewPager(activity);
+        setupViewPager(activity);
     }
 
     private void setupViewPager(FragmentActivity activity) {

@@ -4,7 +4,7 @@ package com.witiw.go4amatch.entities;
  * Created by Patryk on 16.05.2017.
  */
 public class SportingEvent {
-
+    Teams teams;
     private int budget;
     private double distance;
     private LigueType ligueType;
@@ -13,6 +13,12 @@ public class SportingEvent {
     private Attractiveness attractiveness;
 
     public SportingEvent() {
+        teams = new Teams();
+    }
+
+
+    public Teams getTeams() {
+        return teams;
     }
 
     public SportingEvent(SportingEvent sportingEvent) {
@@ -80,4 +86,6 @@ public class SportingEvent {
     public void setAttractiveness(Attractiveness attractiveness) {
         this.attractiveness = attractiveness;
     }
+
+
 }
