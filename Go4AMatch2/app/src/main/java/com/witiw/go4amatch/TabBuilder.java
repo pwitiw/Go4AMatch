@@ -6,6 +6,8 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import static android.view.View.TEXT_ALIGNMENT_CENTER;
@@ -16,6 +18,7 @@ import static android.view.View.TEXT_ALIGNMENT_CENTER;
 
 public class TabBuilder {
 
+    private final int size = 35;
     private static int TAB_COUNTER = 0;
     private TextView textView;
     private Activity activity;
@@ -27,16 +30,17 @@ public class TabBuilder {
 
     public TabBuilder withText(final int stringValue) {
         textView.setText(stringValue);
-        textView.setTextSize(25);
+        textView.setTextSize(size);
         textView.setTextAlignment(TEXT_ALIGNMENT_CENTER);
+        textView.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
         return this;
     }
 
     public TabBuilder withDrawable(final int drawable) {
         Drawable icon = ContextCompat.getDrawable(activity, drawable);
-        icon.setBounds(0, 0, 20, 20);
-
-        textView.setCompoundDrawables(null, null, icon, null);
+        icon.setBounds(0, 0, size, size);
+        textView.setCompoundDrawablePadding(10);
+        textView.setCompoundDrawablesRelativeWithIntrinsicBounds(null, null, icon, null);
         return this;
     }
 

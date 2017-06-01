@@ -1,6 +1,7 @@
 package com.witiw.go4amatch;
 
 import com.witiw.go4amatch.entities.SportingEvent;
+import com.witiw.go4amatch.entities.Criterion;
 
 import java.util.List;
 
@@ -10,7 +11,7 @@ import java.util.List;
 public interface IMainPresenter {
 
 
-    void performSearching();
+    void performSearching(List<Criterion> criterias);
 
     void showResults(List<SportingEvent> events);
 }

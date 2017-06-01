@@ -1,10 +1,12 @@
 package com.witiw.go4amatch.logic.promethee;
 
 
+import com.witiw.go4amatch.entities.Criterion;
 import com.witiw.go4amatch.entities.SportingEvent;
-import com.witiw.go4amatch.logic.objects.Criterion;
+import com.witiw.go4amatch.rest.sportradar.sdk.Sport;
 
-import java.util.LinkedList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -12,21 +14,18 @@ import java.util.List;
  */
 public class PrometheeAlgorithm {
 
-    List<Criterion> criterias;
-
-    public PrometheeAlgorithm(List<? extends Criterion> criterions) {
-        //fixme  this.criterias = PrometheeCriterion.asPrometheeCriterionList(criterions);
+    public PrometheeAlgorithm() {
     }
 
-    public List<SportingEvent> calculateRanking(List<SportingEvent> events) {
+    public void calculateRanking(List<Criterion> criterias, List<SportingEvent> events) {
 
-        pairwaiseComparationAlternatives(events);
-        //calculate flow
-        return new LinkedList<SportingEvent>();
+        double[][] preferenceMatrix = pairwaiseComparationAlternatives(criterias, events);
+        calculateFlow(events, preferenceMatrix);
+        sortResults(events);
     }
 
     //todo body
-    private double[][] pairwaiseComparationAlternatives(List<SportingEvent> events) {
+    private double[][] pairwaiseComparationAlternatives(List<Criterion> criterias, List<SportingEvent> events) {
         double[][] preferenceMatrix = new double[events.size()][events.size()];
         for (int i = 0; i < events.size(); i++) {
             SportingEvent event = events.get(i);
@@ -41,7 +40,7 @@ public class PrometheeAlgorithm {
         return preferenceMatrix;
     }
 
-    private double calculateFinalValue(double[] computedValues) {
+    private double calculateFinalValue(List<Criterion> criterias, double[] computedValues) {
         double sum = 0;
         for (int i = 0; i < criterias.size(); i++) {
             sum += computedValues[i] * criterias.get(i).getFactor();
@@ -63,15 +62,21 @@ public class PrometheeAlgorithm {
         return sum / (preferenceMatrix.length - 1);
     }
 
-    private double calculateFlow(int index, double[][] preferenceMatrix) {
-        double positiveFlow = calculatePositiveFlow(index, preferenceMatrix);
-        double negativeFlow = calculateNegativeFlow(index, preferenceMatrix);
-
-        return positiveFlow - negativeFlow;
+    private void calculateFlow(List<SportingEvent> events, double[][] preferenceMatrix) {
+        for (int i = 0; i < events.size(); i++) {
+            double positiveFlow = calculatePositiveFlow(i, preferenceMatrix);
+            double negativeFlow = calculateNegativeFlow(i, preferenceMatrix);
+            events.get(i).setResult(positiveFlow - negativeFlow);
+        }
     }
 
-    public List<Criterion> getCriterias() {
-        return criterias;
+    private void sortResults(List<SportingEvent> events) {
+        Collections.sort(events, new Comparator<SportingEvent>() {
+            @Override
+            public int compare(SportingEvent o1, SportingEvent o2) {
+                return (int) Math.round((o1.getResult() - o2.getResult()) * 100) / 100;
+            }
+        });
     }
 
 }

@@ -1,7 +1,6 @@
-package com.witiw.go4amatch.logic.objects;
+package com.witiw.go4amatch.entities;
 
 
-import com.witiw.go4amatch.entities.SportingEvent;
 import com.witiw.go4amatch.logic.ahp.Importance;
 
 /**
@@ -48,7 +47,8 @@ public abstract class Criterion {
 
     public abstract double preferenceFunction(SportingEvent event1, SportingEvent event2);
 
-    public double function(double arg1, double arg2) {
+    //fixme dostosowac funkcje do kazdego kryterium
+    protected double function(double arg1, double arg2) {
         return arg1 > arg2 ? 1 : 0;
     }
 }

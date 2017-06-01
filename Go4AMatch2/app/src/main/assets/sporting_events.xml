@@ -1,31 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Sport>
-    <!--<SportingEvent>-->
-        <!--<TeamHome>Real Madryt</TeamHome>-->
-        <!--<TeamAway>Atletico Madryt</TeamAway>-->
-        <!--<Attractiveness>-->
-            <!--<FormHome>WWWWW</FormHome>-->
-            <!--<FormAway>WLLWW</FormAway>-->
-            <!--<AreaAttractiveness>100</AreaAttractiveness>-->
-            <!--<Importance>1</Importance>-->
-            <!--<Position>2</Position>-->
-            <!--<Derby>No</Derby>-->
-        <!--</Attractiveness>-->
-        <!--<Budget>1000</Budget>-->
-        <!--<LigueType>Primera Divison</LigueType>-->
-        <!--<Distance>123</Distance>-->
-    <!--</SportingEvent>-->
-    <SportingEvent>
-        <Competitors home="Real Madrid" away="Lotnik Twardogora"></Competitors>
+    <SportingEvent home="Real Madrid" away="Lotnik Twardogora">
         <Attractiveness>
             <FormHome>WWWWW</FormHome>
             <FormAway>WLLWW</FormAway>
-            <AreaAttractiveness>100</AreaAttractiveness>
             <Importance>1</Importance>
             <Position>2</Position>
-            <Derby>No</Derby>
+            <Derby>0</Derby>
         </Attractiveness>
         <Budget>1000</Budget>
+        <AreaAttractiveness>100</AreaAttractiveness>
+        <LigueType>Primera Divison</LigueType>
+        <Distance>123</Distance>
+    </SportingEvent>
+    <SportingEvent home="FC Barcelona" away="Lalala">
+        <Attractiveness>
+            <FormHome>WWWWW</FormHome>
+            <FormAway>WLLWW</FormAway>
+            <Importance>1</Importance>
+            <Position>15</Position>
+            <Derby>1</Derby>
+        </Attractiveness>
+        <Budget>800</Budget>
+        <AreaAttractiveness>200</AreaAttractiveness>
+        <LigueType>Eerste klasse</LigueType>
+        <Distance>60</Distance>
+    </SportingEvent>
+    <SportingEvent home="Real Madrid" away="Lotnik Twardogora">
+        <Attractiveness>
+            <FormHome>WWWWW</FormHome>
+            <FormAway>WLLWW</FormAway>
+            <Importance>1</Importance>
+            <Position>2</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>200</Budget>
+        <AreaAttractiveness>100</AreaAttractiveness>
         <LigueType>Primera Divison</LigueType>
         <Distance>123</Distance>
     </SportingEvent>

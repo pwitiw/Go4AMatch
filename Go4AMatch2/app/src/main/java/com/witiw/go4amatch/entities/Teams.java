@@ -4,7 +4,7 @@ package com.witiw.go4amatch.entities;
  * Created by Patryk on 28.05.2017.
  */
 
-public     class Teams {
+public class Teams {
     private String home;
     private String away;
     private String formHome;

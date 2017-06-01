@@ -21,8 +21,8 @@ import java.util.List;
 public class XmlPojoConverter {
 
     private static final String SPORTING_EVENT = "SportingEvent";
-    private static final String TEAM_HOME = "TeamHome";
-    private static final String TEAM_AWAY = "TeamAway";
+    private static final String TEAM_HOME = "home";
+    private static final String TEAM_AWAY = "away";
     private static final String ATTRACTIVENESS = "Attractiveness";
     private static final String AREA_ATTRACTIVENESS = "AreaAttractiveness";
     private static final String IMPORTANCE = "Importance";
@@ -31,23 +31,34 @@ public class XmlPojoConverter {
     private static final String BUDGET = "Budget";
     private static final String LIGUE_TYPE = "LigueType";
     private static final String DISTANCE = "Distance";
+    private static final String FORM_HOME = "FormHome";
+    private static final String FORM_AWAY = "FormAway";
+
 
     public static List<SportingEvent> convert(Document document) {
         List<SportingEvent> events = new ArrayList<>();
         NodeList nodes = document.getElementsByTagName(SPORTING_EVENT);
         for (int i = 0; i < nodes.getLength(); i++) {
             SportingEvent event = new SportingEvent();
-            NodeList childNodes = ((Element) nodes.item(0)).getChildNodes();
-            event.getTeams().setHome(((Element) childNodes.item(1)).getAttribute("home"));
-            event.getTeams().setAway(((Element) childNodes.item(1)).getAttribute("away"));
-            event.getTeams().setFormHome(childNodes.item(5).getChildNodes().item(1).getChildNodes().item(0).getNodeValue());
-            event.getTeams().setFormHome(childNodes.item(5).getChildNodes().item(3).getChildNodes().item(0).getNodeValue());
-            event.setAreaAttractiveness(Double.parseDouble(childNodes.item(7).getChildNodes().item(0).getNodeValue()));
-            event.setLigueType(LigueType.valueOf(childNodes.item(9).getChildNodes().item(0).getNodeValue()));
-            event.setDistance(Double.parseDouble(childNodes.item(11).getChildNodes().item(0).getNodeValue()));
-            System.out.println(event);
-            // event.setAreaAttractiveness();
+            Element element = (Element) nodes.item(i);
+            event.getTeams().setHome(element.getAttribute(TEAM_HOME));
+            event.getTeams().setAway(element.getAttribute(TEAM_AWAY));
+
+            /* ATRACTIVENESS */
+            Element attractiveness = (Element) element.getElementsByTagName(ATTRACTIVENESS).item(0);
+            event.getAttractiveness().setImportance(Integer.parseInt(attractiveness.getElementsByTagName(IMPORTANCE).item(0).getTextContent()));
+            event.getAttractiveness().setDerby(Integer.parseInt(attractiveness.getElementsByTagName(DERBY).item(0).getTextContent()));
+            event.getAttractiveness().setPosition(Integer.parseInt(attractiveness.getElementsByTagName(POSITION).item(0).getTextContent()));
+            event.getTeams().setFormHome(attractiveness.getElementsByTagName(FORM_HOME).item(0).getTextContent());
+            event.getTeams().setFormAway(attractiveness.getElementsByTagName(FORM_AWAY).item(0).getTextContent());
+            /* OTHER */
+            event.setAreaAttractiveness(Double.parseDouble(element.getElementsByTagName(AREA_ATTRACTIVENESS).item(0).getTextContent()));
+            event.setBudget(Integer.parseInt(element.getElementsByTagName(BUDGET).item(0).getTextContent()));
+            event.setLigueType(LigueType.getTypeForName(element.getElementsByTagName(LIGUE_TYPE).item(0).getTextContent()));
+            event.setDistance(Double.parseDouble(element.getElementsByTagName(DISTANCE).item(0).getTextContent()));
+            events.add(event);
         }
+
         return events;
     }
 

@@ -1,7 +1,7 @@
 package com.witiw.go4amatch.logic.ahp;
 
 
-import com.witiw.go4amatch.logic.objects.Criterion;
+import com.witiw.go4amatch.entities.Criterion;
 
 import java.util.List;
 

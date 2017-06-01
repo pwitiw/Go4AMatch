@@ -1,7 +1,7 @@
 @relation bayes
 
 @ATTRIBUTE form {Bad,Medium,Good}
-@ATTRIBUTE weight {0,1,2}
+@ATTRIBUTE importance {0,1,2}
 @ATTRIBUTE positiondifference NUMERIC
 @ATTRIBUTE derby {Y,N}
 

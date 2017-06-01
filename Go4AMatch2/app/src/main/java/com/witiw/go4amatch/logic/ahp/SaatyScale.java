@@ -1,7 +1,7 @@
 package com.witiw.go4amatch.logic.ahp;
 
 
-import com.witiw.go4amatch.logic.objects.Criterion;
+import com.witiw.go4amatch.entities.Criterion;
 
 /**
  * Created by Patryk on 29.04.2017.
@@ -9,9 +9,13 @@ import com.witiw.go4amatch.logic.objects.Criterion;
 public class SaatyScale {
 
     private static final Integer EQUAL = 1;
+    private static final Integer WEAK = 2;
     private static final Integer MODERATE = 3;
+    private static final Integer MODERATE_PLUS = 4;
     private static final Integer STRONG = 5;
+    private static final Integer STRONG_PLUS = 6;
     private static final Integer VERY_STRONG = 7;
+    private static final Integer VERY_VERY_STRONG = 8;
     private static final Integer EXTREME = 9;
 
     public static double getRange(Criterion c1, Criterion c2) {
@@ -22,15 +26,27 @@ public class SaatyScale {
                 result = EQUAL;
                 break;
             case 1:
-                result = MODERATE;
+                result = WEAK;
                 break;
             case 2:
-                result = STRONG;
+                result = MODERATE;
                 break;
             case 3:
-                result = VERY_STRONG;
+                result = MODERATE_PLUS;
                 break;
             case 4:
+                result = STRONG;
+                break;
+            case 5:
+                result = STRONG_PLUS;
+                break;
+            case 6:
+                result = VERY_STRONG;
+                break;
+            case 7:
+                result = VERY_VERY_STRONG;
+                break;
+            case 8:
                 result = EXTREME;
                 break;
         }

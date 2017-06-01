@@ -5,9 +5,10 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.widget.Toast;
 
-import com.witiw.go4amatch.rest.api.SportRadarAPI;
 import com.witiw.go4amatch.rest.api.RestServiceFactory;
+import com.witiw.go4amatch.rest.api.SportRadarAPI;
 import com.witiw.go4amatch.rest.sportradar.sdk.RootObject;
 
 import retrofit.Callback;
@@ -51,18 +52,22 @@ public class MainActivity extends AppCompatActivity implements IMainActivity {
     }
 
     @Override
-    public void showProgress() {
-        progressDialog = ProgressDialog.show(this, "Please wait ...", "Downloading Image ...", true);
+    public void showProgress(Context context) {
+ //       progressDialog.setMessage("Trwa obliczanie");
+   //     progressDialog.show();
     }
 
     @Override
     public void hideProgress() {
-        progressDialog.dismiss();
+
+        //progressDialog.dismiss();
     }
 
     @Override
     public void showToast(String text) {
-
+        Toast t = new Toast(this);
+        t.setText(text);
+        t.show();
     }
 
     @Override

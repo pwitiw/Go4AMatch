@@ -10,7 +10,7 @@ public interface AppProperties {
     String BASE_GOOGLE_URL = "https://maps.googleapis.com/maps/api/";
     String JSON_DOC_TYPE = "json";
     String XML_DOC_TYPE = "xml";
-    String TRAINING_DATA_NAIVE_BAYES_PATH = "D:/Uczelnia/Go4AMatch/training_data_bayes.arff";
+    String TRAINING_DATA_NAIVE_BAYES_PATH = "D:/Uczelnia/Go4AMatch/";
     String GOOGLE_PLACES_API_KEY = "AIzaSyCJ54buaF96kemioDMqmzz4TnF9s2wJShg";
     String GOOGLE_TRANSIT_API_KEY = "AIzaSyDTAsZdA7V5mcgj4BURQ34bor0OpTujJqE";
 }

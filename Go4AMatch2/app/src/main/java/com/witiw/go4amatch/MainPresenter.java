@@ -7,9 +7,8 @@ import android.support.v4.view.ViewPager;
 
 import com.witiw.go4amatch.entities.SportingEvent;
 import com.witiw.go4amatch.logic.AlgorithmEnginee;
-import com.witiw.go4amatch.logic.objects.Criterion;
+import com.witiw.go4amatch.entities.Criterion;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -21,6 +20,8 @@ public class MainPresenter implements IMainPresenter {
     ResultFragment resultFragment;
     IMainActivity mainActivity;
     AlgorithmEnginee algorithmEnginee;
+    TabLayout tabLayout;
+    ViewPagerAdapter adapter;
 
     public MainPresenter(MainActivity activity) {
         algorithmEnginee = new AlgorithmEnginee(this, activity);
@@ -30,14 +31,14 @@ public class MainPresenter implements IMainPresenter {
 
     private void setupViewPager(FragmentActivity activity) {
         ViewPager viewPager = (ViewPager) activity.findViewById(R.id.viewpager);
-        TabLayout tabLayout = (TabLayout) activity.findViewById(R.id.tabs);
+        tabLayout = (TabLayout) activity.findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
-        ViewPagerAdapter adapter = new ViewPagerAdapter(activity.getSupportFragmentManager());
+        adapter = new ViewPagerAdapter(activity.getSupportFragmentManager());
         preferenceFragment = new PreferenceFragment(this);
         resultFragment = new ResultFragment(this);
         adapter.addFragment(preferenceFragment, "Preferences");
         adapter.addFragment(resultFragment, "List");
-        adapter.addFragment(new ResultFragment(this), "Map");
+//        adapter.addFragment(new ResultFragment(this), "Map");
         viewPager.setAdapter(adapter);
         setupTabIcons(activity, tabLayout);
     }
@@ -51,24 +52,26 @@ public class MainPresenter implements IMainPresenter {
                 .withText(R.string.list_mode)
                 .withDrawable(R.drawable.ic_list)
                 .buildForLayout(tabLayout);
-        new TabBuilder(activity)
-                .withText(R.string.map_mode)
-                .withDrawable(R.drawable.ic_map)
-                .buildForLayout(tabLayout);
+//        new TabBuilder(activity)
+//                .withText(R.string.map_mode)
+//                .withDrawable(R.drawable.ic_map)
+//                .buildForLayout(tabLayout);
     }
 
     @Override
-    public void performSearching() {
-        mainActivity.showProgress();
+    public void performSearching(List<Criterion> criterias) {
+        mainActivity.showProgress(preferenceFragment.getContext());
         try {
-            algorithmEnginee.run(new ArrayList<Criterion>());
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+            algorithmEnginee.run(criterias);
+        } catch (Exception e) {
+            mainActivity.showToast("Something went wrong.");
         }
     }
 
     @Override
     public void showResults(List<SportingEvent> events) {
+        resultFragment.updateData(events);
+        tabLayout.getTabAt(1).select();
         mainActivity.hideProgress();
     }
 }

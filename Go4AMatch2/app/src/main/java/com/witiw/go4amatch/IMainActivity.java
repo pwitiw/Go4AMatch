@@ -8,7 +8,7 @@ import android.content.Context;
 
 public interface IMainActivity {
 
-    void showProgress();
+    void showProgress(Context context);
 
     void hideProgress();
 

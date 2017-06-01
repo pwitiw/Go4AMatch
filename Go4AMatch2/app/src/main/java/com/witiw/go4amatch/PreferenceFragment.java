@@ -1,17 +1,23 @@
 package com.witiw.go4amatch;
 
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.SeekBar;
+
+import com.witiw.go4amatch.logic.ahp.Importance;
+import com.witiw.go4amatch.entities.Criterion;
+import com.witiw.go4amatch.entities.criterions.AttractivenessCriterion;
+import com.witiw.go4amatch.entities.criterions.BudgetCriterion;
+import com.witiw.go4amatch.entities.criterions.DistanceCriterion;
+import com.witiw.go4amatch.entities.criterions.LigueTypeCriterion;
+
+import org.adw.library.widgets.discreteseekbar.DiscreteSeekBar;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,11 +28,11 @@ import java.util.List;
 
 public class PreferenceFragment extends Fragment {
 
-    SeekBar budget;
-    SeekBar attractiveness;
-    SeekBar areaAttractiveness;
-    SeekBar ligueType;
-    SeekBar communication;
+    DiscreteSeekBar budget;
+    DiscreteSeekBar attractiveness;
+    DiscreteSeekBar areaAttractiveness;
+    DiscreteSeekBar ligueType;
+    DiscreteSeekBar distance;
     Button searchButton;
     IMainPresenter presenter;
     ProgressDialog ps;
@@ -36,23 +42,23 @@ public class PreferenceFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, final ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_preferences, container, false);
         searchButton = (Button) view.findViewById(R.id.btSearch);
-        budget = (SeekBar) view.findViewById(R.id.sbBudget);
+
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              ps =  ProgressDialog.show(getContext(), "Please wait ...", "Downloading Image ...", true);
-                presenter.performSearching();
-                ps.hide();
+                List<Criterion> criterias = getCrieria();
+                presenter.performSearching(criterias);
             }
         });
 
-        attractiveness = (SeekBar) view.findViewById(R.id.sbAttractiveness);
-        areaAttractiveness = (SeekBar) view.findViewById(R.id.sbAreaAttractiveness);
-        ligueType = (SeekBar) view.findViewById(R.id.sbLigueType);
-        communication = (SeekBar) view.findViewById(R.id.sbCommunication);
+        budget = (DiscreteSeekBar) view.findViewById(R.id.sbBudget);
+        attractiveness = (DiscreteSeekBar) view.findViewById(R.id.sbAttractiveness);
+        areaAttractiveness = (DiscreteSeekBar) view.findViewById(R.id.sbAreaAttractiveness);
+        ligueType = (DiscreteSeekBar) view.findViewById(R.id.sbLigueType);
+        distance = (DiscreteSeekBar) view.findViewById(R.id.sbDistance);
         return view;
     }
 
@@ -66,7 +72,39 @@ public class PreferenceFragment extends Fragment {
         }
     }
 
-    public Button getSearchButton() {
-        return searchButton;
+    public List<Criterion> getCrieria() {
+        final List<Criterion> criteria = new ArrayList<>();
+        if (budget.getProgress() > 0)
+            criteria.add(new BudgetCriterion(Importance.valueOf(budget.getProgress())));
+        if (distance.getProgress() > 0)
+            criteria.add(new DistanceCriterion(Importance.valueOf(distance.getProgress())));
+        if (ligueType.getProgress() > 0)
+            criteria.add(new LigueTypeCriterion(Importance.valueOf(ligueType.getProgress())));
+        if (areaAttractiveness.getProgress() > 0)
+            criteria.add(new AttractivenessCriterion(Importance.valueOf(areaAttractiveness.getProgress())));
+        if (attractiveness.getProgress() > 0)
+            criteria.add(new AttractivenessCriterion(Importance.valueOf(attractiveness.getProgress())));
+        return criteria;
     }
+
+    private DiscreteSeekBar.OnProgressChangeListener getOnProgressChangeListener() {
+        return new DiscreteSeekBar.OnProgressChangeListener() {
+            @Override
+            public void onProgressChanged(DiscreteSeekBar seekBar, int value, boolean fromUser) {
+
+                seekBar.setIndicatorFormatter(Importance.valueOf(seekBar.getProgress()).getImportanceLevel());
+            }
+
+            @Override
+            public void onStartTrackingTouch(DiscreteSeekBar seekBar) {
+                seekBar.setIndicatorFormatter(Importance.valueOf(seekBar.getProgress()).getImportanceLevel());
+            }
+
+            @Override
+            public void onStopTrackingTouch(DiscreteSeekBar seekBar) {
+                seekBar.setIndicatorFormatter(Importance.valueOf(seekBar.getProgress()).getImportanceLevel());
+            }
+        };
+    }
+
 }

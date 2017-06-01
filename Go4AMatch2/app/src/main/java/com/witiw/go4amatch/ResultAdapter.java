@@ -12,8 +12,6 @@ import android.widget.TextView;
 import com.witiw.go4amatch.entities.LigueType;
 import com.witiw.go4amatch.entities.SportingEvent;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -38,26 +36,22 @@ public class ResultAdapter extends ArrayAdapter<SportingEvent> {
         if (view == null)
             view = inflater.inflate(R.layout.result_row, null);
 
-        SportingEvent order = getItem(pos);
+        SportingEvent event = getItem(pos);
 
         TextView homeTeam = (TextView) view.findViewById(R.id.tvTeamHome);
         TextView awayTeam = (TextView) view.findViewById(R.id.tvTeamAway);
         ImageView image = (ImageView) view.findViewById(R.id.imgLigue);
 
-        if (order.getLigueType().equals(LigueType.CHAMPIONS)) {
-            homeTeam.setText("Manchester United");
-            awayTeam.setText("Legia Warszawa");
+        if (event.getLigueType().equals(LigueType.CHAMPIONS_LEAGUE)) {
             image.setImageResource(R.drawable.champions_league);
-        } else if (order.getLigueType().equals(LigueType.EUROPE)) {
+        } else if (event.getLigueType().equals(LigueType.EUROPE)) {
             image.setImageResource(R.drawable.europa_league);
-            homeTeam.setText("FC Barcelona");
-            awayTeam.setText("Juventus Turyn");
         } else {
             image.setImageResource(R.drawable.other);
-            homeTeam.setText("Real Madrid");
-            awayTeam.setText("As Monaco");
         }
 
+        homeTeam.setText(event.getTeams().getHome());
+        awayTeam.setText(event.getTeams().getAway());
         return view;
     }
 
