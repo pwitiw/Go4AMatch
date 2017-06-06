@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Go4AMatch</string>
+    <string name="font_fontFamily_medium">sans-serif</string>
+    <!--Fragment Inputs Strings-->
+    <string name="preferences_mode">Preferencje</string>
+    <string name="map_mode">Mapa</string>
+    <string name="list_mode">Lista</string>
+    <string name="search">Szukj</string>
+    <string name="budget">Budżet</string>
+    <string name="criterion">Kryterium</string>
+    <string name="scale">Skala ważności</string>
+    <string name="attractiveness">Atrakcyjność widowiska</string>/string>
+    <string name="area_attractiveness">Atrakcje w pobliżu rozgrywek </string>
+    <string name="ligue_type">Rodzaj rozgrywek </string>
+    <string name="distance">Odległość</string>
+    <string name="max_bar_value">9</string>
+    <integer name="bar_start">5</integer>
+    <integer name="bar_max">9</integer>
+    <integer name="bar_min">0</integer>
+    <integer name="weight_seek_bar">3</integer>
+</resources>
