@@ -9,7 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.witiw.go4amatch.entities.LigueType;
+import com.witiw.go4amatch.entities.LeagueType;
 import com.witiw.go4amatch.entities.SportingEvent;
 
 import java.util.List;
@@ -42,9 +42,9 @@ public class ResultAdapter extends ArrayAdapter<SportingEvent> {
         TextView awayTeam = (TextView) view.findViewById(R.id.tvTeamAway);
         ImageView image = (ImageView) view.findViewById(R.id.imgLigue);
 
-        if (event.getLigueType().equals(LigueType.CHAMPIONS_LEAGUE)) {
+        if (event.getLeagueType().equals(LeagueType.CHAMPIONS_LEAGUE)) {
             image.setImageResource(R.drawable.champions_league);
-        } else if (event.getLigueType().equals(LigueType.EUROPE)) {
+        } else if (event.getLeagueType().equals(LeagueType.EUROPE)) {
             image.setImageResource(R.drawable.europa_league);
         } else {
             image.setImageResource(R.drawable.other);

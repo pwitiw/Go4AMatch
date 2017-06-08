@@ -3,7 +3,7 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="tab_label">20sp</dimen>
-    <dimen name="criterion_height">75dp</dimen>
+    <dimen name="criterion_height">85dp</dimen>
     <dimen name="preferences_font_size">25px</dimen>
     <dimen name="scale_font_size">15px</dimen>
     <dimen name="title_font_size">30px</dimen>

@@ -1,37 +1,43 @@
-package com.witiw.go4amatch.logic.classifier;
+package com.witiw.go4amatch.logic.services;
+
+import com.witiw.go4amatch.entities.FormType;
+import com.witiw.go4amatch.entities.Teams;
 
 /**
  * Created by Patryk on 15.05.2017.
  */
-public class Condition {
+public class FormService {
 
     private static final int TRESHOLD_GOOD = 63;
     private static final int TRESHOLD_MEDIUM = 45;
 
-    public static ConditionType setDownConditionType(String form1, String form2) {
+    public FormType getFormType(Teams teams) {
+        return getFormType(teams.getFormHome(), teams.getFormAway());
+    }
 
-        int factor1 = computeConditionFactor(form1);
-        int factor2 = computeConditionFactor(form2);
+    public FormType getFormType(String team1, String team2) {
+        int factor1 = computeFormFactor(team1);
+        int factor2 = computeFormFactor(team2);
         return getFormTypeForFactors(factor1, factor2);
     }
 
-    private static ConditionType getFormTypeForFactors(int f1, int f2) {
+    private FormType getFormTypeForFactors(int f1, int f2) {
         int f = f1 + f2;
         System.out.println(f);
         if (f >= TRESHOLD_GOOD)
-            return ConditionType.GOOD;
+            return FormType.GOOD;
         else if (f >= TRESHOLD_MEDIUM)
-            return ConditionType.MEDIUM;
+            return FormType.MEDIUM;
         else
-            return ConditionType.BAD;
+            return FormType.BAD;
     }
 
-    private static int computeConditionFactor(String condition) {
+    private int computeFormFactor(String condition) {
         condition = condition.toUpperCase();
         int factor = 0;
         int multiplier = condition.toCharArray().length;
         for (Character c : condition.toCharArray()) {
-            int conditionValue = getValueForCondition(c);
+            int conditionValue = getValueForForm(c);
             factor += multiplier * conditionValue;
             multiplier--;
         }
@@ -39,7 +45,7 @@ public class Condition {
         return factor;
     }
 
-    private static int getValueForCondition(char condition) {
+    private int getValueForForm(char condition) {
         if (condition == 'L') {
             return 0;
         } else if (condition == 'D')

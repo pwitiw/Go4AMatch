@@ -7,14 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.widget.Toast;
 
-import com.witiw.go4amatch.rest.api.RestServiceFactory;
-import com.witiw.go4amatch.rest.api.SportRadarAPI;
-import com.witiw.go4amatch.rest.sportradar.sdk.RootObject;
-
-import retrofit.Callback;
-import retrofit.Response;
-import retrofit.Retrofit;
-
 public class MainActivity extends AppCompatActivity implements IMainActivity {
 
     private MainPresenter presenter;
@@ -30,44 +22,9 @@ public class MainActivity extends AppCompatActivity implements IMainActivity {
         presenter = new MainPresenter(this);
     }
 
-
-    public void testRest() {
-
-        SportRadarAPI http = RestServiceFactory.getSportRadarAPI(SportRadarAPI.class);
-        http.getDailySchedule("2017-05-03").enqueue(new Callback<RootObject>() {
-            @Override
-            public void onResponse(Response<RootObject> response, Retrofit retrofit) {
-                if (response.code() == 200) {
-                    System.out.print("bad request");
-                } else {
-                    RootObject r = response.body();
-                }
-            }
-
-            @Override
-            public void onFailure(Throwable t) {
-
-            }
-        });
-    }
-
-    @Override
-    public void showProgress(Context context) {
- //       progressDialog.setMessage("Trwa obliczanie");
-   //     progressDialog.show();
-    }
-
-    @Override
-    public void hideProgress() {
-
-        //progressDialog.dismiss();
-    }
-
     @Override
     public void showToast(String text) {
-        Toast t = new Toast(this);
-        t.setText(text);
-        t.show();
+      Toast.makeText(this,text,Toast.LENGTH_SHORT);
     }
 
     @Override

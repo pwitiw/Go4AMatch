@@ -36,8 +36,8 @@ public class TeamProfile {
         return venue.getCityName();
     }
 
-    public String getForm() {
-        return statistics.seasons.get(statistics.seasons.size() - 1).getForm().getTotal();
+    public String getFormForSeason(String seasonId) {
+        return statistics.getFormForSeason(seasonId);
     }
 
     public String getTeamName() {

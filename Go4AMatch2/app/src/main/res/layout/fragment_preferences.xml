@@ -8,19 +8,26 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/background"></LinearLayout>
-
+        android:background="@drawable/background_darker"></LinearLayout>
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/spinner"
+        android:layout_weight="1" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
 
         <Button
             android:id="@+id/btSearch"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_margin="70dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="85dp"
+            android:textSize="@dimen/title_font_size"
+
             android:text="@string/search" />
 
     </LinearLayout>
@@ -32,6 +39,34 @@
         android:layout_alignParentTop="true"
         android:orientation="vertical">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:weightSum="6"
+            android:focusableInTouchMode="true">
+
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="left|center"
+                android:text="@string/location"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/preferences_font_size" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/tvLocation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/preferences_font_size"
+                    android:imeOptions="actionDone"
+                    android:inputType="text" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -51,9 +86,9 @@
                 android:textSize="@dimen/title_font_size"
                 android:textStyle="bold"
                 android:shadowColor="#7000"
-                android:shadowDx="12"
-                android:shadowDy="12"
-                android:shadowRadius="8"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="3"
                 />
 
             <TextView
@@ -64,22 +99,29 @@
                 android:gravity="center"
                 android:text="@string/scale"
                 android:textColor="@color/text_color"
-                android:textSize="@dimen/title_font_size" />
+                android:textSize="@dimen/title_font_size"
+                android:textStyle="bold"
+                android:shadowColor="#7000"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="3"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginRight="3dp"
                 android:layout_weight="4"
                 android:gravity="bottom|right"
-                android:text="Niesistotny"
-                android:textSize="@dimen/scale_font_size" />
+                android:text="Niesistotne"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/scale_font_size"
+                android:layout_marginLeft="50dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -87,16 +129,20 @@
                 android:layout_weight="3"
                 android:gravity="bottom|right"
                 android:text="Bardzo ważne"
-                android:textSize="@dimen/scale_font_size" />
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/scale_font_size"
+                android:layout_marginRight="5dp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/criterion_height"
-            android:layout_margin="10dp"
             android:orientation="horizontal"
-            android:weightSum="6">
+            android:weightSum="6"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp">
 
             <TextView
                 android:id="@+id/tvBudget"
@@ -130,7 +176,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/criterion_height"
-            android:layout_margin="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
             android:orientation="horizontal"
             android:weightSum="6">
 
@@ -167,7 +215,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/criterion_height"
-            android:layout_margin="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
             android:orientation="horizontal"
             android:weightSum="6">
 
@@ -203,7 +253,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/criterion_height"
-            android:layout_margin="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
             android:orientation="horizontal"
             android:weightSum="6">
 
@@ -240,8 +292,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/criterion_height"
-            android:layout_margin="10dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
             android:orientation="horizontal"
             android:weightSum="6">
 

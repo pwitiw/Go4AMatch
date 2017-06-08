@@ -5,7 +5,7 @@
         <city>Berlin</city>
         <tempc>0°C</tempc>
         <tempf>32°F</tempf>
-        <condition>Snowing</condition>
+        <formType>Snowing</formType>
         <windspeed>5 kmph</windspeed>
         <icon>snowing</icon>
     </weatherdata>
@@ -14,7 +14,7 @@
         <city>Bangalore</city>
         <tempc>23°C</tempc>
         <tempf>73.4°F</tempf>
-        <condition>Thunderstorms</condition>
+        <formType>Thunderstorms</formType>
         <windspeed>10 kmph</windspeed>
         <icon>thunder</icon>
     </weatherdata>
@@ -23,7 +23,7 @@
         <city>London</city>
         <tempc>5°C</tempc>
         <tempf>41°F</tempf>
-        <condition>Rainy</condition>
+        <formType>Rainy</formType>
         <windspeed>2 kmph</windspeed>
         <icon>rainy</icon>
     </weatherdata>
@@ -32,7 +32,7 @@
         <city>New York</city>
         <tempc>18°C</tempc>
         <tempf>64.4°F</tempf>
-        <condition>Cloudy</condition>
+        <formType>Cloudy</formType>
         <windspeed>7 kmph</windspeed>
         <icon>cloudy</icon>
     </weatherdata>
@@ -41,7 +41,7 @@
         <city>Sydney</city>
         <tempc>32°C</tempc>
         <tempf>89.6°F</tempf>
-        <condition>Sunny</condition>
+        <formType>Sunny</formType>
         <windspeed>10 kmph</windspeed>
         <icon>sunny</icon>
     </weatherdata>

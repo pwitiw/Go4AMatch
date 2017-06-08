@@ -1,9 +1,8 @@
-package com.witiw.go4amatch.rest.google;
+package com.witiw.go4amatch.rest.api.google;
 
 import org.simpleframework.xml.ElementList;
 import org.simpleframework.xml.Root;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -13,7 +12,7 @@ import java.util.List;
 public class PlaceSearchResponse {
 
     @ElementList(inline = true, entry = "result",  type = Result.class)
-    private List<Result> results = new ArrayList();
+    private List<Result> results;
 
     public List<Result> getResults() {
         return results;

@@ -63,7 +63,7 @@ public class BayesClassifier {
         Instance instance = new Instance(instances.numAttributes());
         instance.setDataset(instances);
         instances.add(instance);
-        instance.setValue(0,attractiveness.getCondition().getName());
+        instance.setValue(0,attractiveness.getFormType().getName());
         instance.setValue(1,attractiveness.getImportance());
         instance.setValue(2,attractiveness.getPosition());
         instance.setValue(3,attractiveness.getIsDerby());

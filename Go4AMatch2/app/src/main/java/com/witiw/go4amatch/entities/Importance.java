@@ -1,4 +1,4 @@
-package com.witiw.go4amatch.logic.ahp;
+package com.witiw.go4amatch.entities;
 
 /**
  * Created by Patryk on 28.04.2017.

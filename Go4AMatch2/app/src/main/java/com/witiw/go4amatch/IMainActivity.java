@@ -8,9 +8,7 @@ import android.content.Context;
 
 public interface IMainActivity {
 
-    void showProgress(Context context);
 
-    void hideProgress();
 
     void showToast(String text);
 

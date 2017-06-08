@@ -1,8 +1,6 @@
 package com.witiw.go4amatch.entities;
 
 
-import com.witiw.go4amatch.logic.ahp.Importance;
-
 /**
  * Created by Patryk on 21.05.2017.
  */
@@ -12,6 +10,7 @@ public abstract class Criterion {
     private Importance importance;
 
     public Criterion(String name, Importance importance) {
+
         this.name = name;
         this.importance = importance;
         factor = 0.0;

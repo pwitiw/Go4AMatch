@@ -1,13 +1,14 @@
 package com.witiw.go4amatch;
 
 import android.app.Activity;
+import android.content.Context;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 
+import com.witiw.go4amatch.entities.Criterion;
 import com.witiw.go4amatch.entities.SportingEvent;
 import com.witiw.go4amatch.logic.AlgorithmEnginee;
-import com.witiw.go4amatch.entities.Criterion;
 
 import java.util.List;
 
@@ -23,8 +24,8 @@ public class MainPresenter implements IMainPresenter {
     TabLayout tabLayout;
     ViewPagerAdapter adapter;
 
+
     public MainPresenter(MainActivity activity) {
-        algorithmEnginee = new AlgorithmEnginee(this, activity);
         mainActivity = activity;
         setupViewPager(activity);
     }
@@ -60,18 +61,36 @@ public class MainPresenter implements IMainPresenter {
 
     @Override
     public void performSearching(List<Criterion> criterias) {
-        mainActivity.showProgress(preferenceFragment.getContext());
-        try {
-            algorithmEnginee.run(criterias);
-        } catch (Exception e) {
-            mainActivity.showToast("Something went wrong.");
-        }
+//        showProgress(preferenceFragment.getContext());
+        new AlgorithmEnginee(this).execute(criterias.toArray(new Criterion[criterias.size()]));
     }
 
     @Override
     public void showResults(List<SportingEvent> events) {
         resultFragment.updateData(events);
         tabLayout.getTabAt(1).select();
-        mainActivity.hideProgress();
+        hideProgress();
     }
+
+    @Override
+    public Context getContext() {
+        return mainActivity.getContext();
+    }
+
+    @Override
+    public void showProgress() {
+        preferenceFragment.initializeProgressDialog(getContext());
+    }
+
+    @Override
+    public void hideProgress() {
+        preferenceFragment.cancelProgressDialog();
+    }
+
+
+    @Override
+    public String getLocation() {
+        return preferenceFragment.getLocationText();
+    }
+
 }

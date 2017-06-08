@@ -1,4 +1,4 @@
-package com.witiw.go4amatch.rest.google;
+package com.witiw.go4amatch.rest.api.google;
 
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.Root;

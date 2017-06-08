@@ -8,8 +8,8 @@ public class SportingEvent {
     Teams teams;
     private int budget;
     private double distance;
-    private LigueType ligueType;
-    private double areaAttractiveness;
+    private LeagueType leagueType;
+    private int areaAttractiveness;
     private Attractiveness attractiveness;
 
     public SportingEvent() {
@@ -25,15 +25,17 @@ public class SportingEvent {
     public SportingEvent(SportingEvent sportingEvent) {
         this.budget = sportingEvent.budget;
         this.distance = sportingEvent.distance;
-        this.ligueType = sportingEvent.ligueType;
+        this.leagueType = sportingEvent.leagueType;
         this.areaAttractiveness = sportingEvent.areaAttractiveness;
         this.attractiveness = sportingEvent.attractiveness;
     }
 
-    public SportingEvent(int budget, double distance, LigueType ligueType, double communicationConnection, double areaAttractiveness, Attractiveness attractiveness) {
+    public SportingEvent(Teams teams, int budget, double distance, LeagueType leagueType, int areaAttractiveness, Attractiveness attractiveness) {
+
+        this.teams = teams;
         this.budget = budget;
         this.distance = distance;
-        this.ligueType = ligueType;
+        this.leagueType = leagueType;
         this.areaAttractiveness = areaAttractiveness;
         this.attractiveness = attractiveness;
     }
@@ -66,19 +68,19 @@ public class SportingEvent {
         this.distance = distance;
     }
 
-    public LigueType getLigueType() {
-        return ligueType;
+    public LeagueType getLeagueType() {
+        return leagueType;
     }
 
-    public void setLigueType(LigueType ligueType) {
-        this.ligueType = ligueType;
+    public void setLeagueType(LeagueType leagueType) {
+        this.leagueType = leagueType;
     }
 
-    public double getAreaAttractiveness() {
+    public int getAreaAttractiveness() {
         return areaAttractiveness;
     }
 
-    public void setAreaAttractiveness(double areaAttractiveness) {
+    public void setAreaAttractiveness(int areaAttractiveness) {
         this.areaAttractiveness = areaAttractiveness;
     }
 
@@ -90,5 +92,71 @@ public class SportingEvent {
         this.attractiveness = attractiveness;
     }
 
+
+    public static class SportingEventBuilder {
+        Teams teams;
+        private int budget;
+        private double distance;
+        private LeagueType leagueType;
+        private int areaAttractiveness;
+        private Attractiveness attractiveness;
+
+        public SportingEventBuilder() {
+            attractiveness = new Attractiveness();
+        }
+
+
+        public SportingEventBuilder withTeams(Teams teams) {
+            this.teams = teams;
+            return this;
+        }
+
+        public SportingEventBuilder withBudget(int budget) {
+            this.budget = budget;
+            return this;
+        }
+
+        public SportingEventBuilder withAreaAttractiveness(int areaAttractiveness) {
+            this.areaAttractiveness = areaAttractiveness;
+            return this;
+        }
+
+        public SportingEventBuilder withLeagueType(LeagueType leagueType) {
+            this.leagueType = leagueType;
+            return this;
+        }
+
+
+        public SportingEventBuilder withDistance(double distance) {
+            this.distance = distance;
+            return this;
+        }
+
+        public SportingEventBuilder withImportance(int importance) {
+            this.attractiveness.setImportance(importance);
+            return this;
+        }
+
+        public SportingEventBuilder withPosition(int position) {
+            attractiveness.setPosition(position);
+            return this;
+        }
+
+        public SportingEventBuilder withDerby(int derby) {
+            attractiveness.setDerby(derby);
+            return this;
+        }
+
+        public SportingEventBuilder withForm(FormType form) {
+            attractiveness.setFormType(form);
+            return this;
+        }
+
+        public SportingEvent build() {
+            return new SportingEvent(teams, budget, distance, leagueType, areaAttractiveness, attractiveness);
+        }
+
+
+    }
 
 }

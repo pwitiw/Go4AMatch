@@ -5,10 +5,11 @@
     <string name="preferences_mode">Preferencje</string>
     <string name="map_mode">Mapa</string>
     <string name="list_mode">Lista</string>
-    <string name="search">Szukj</string>
+    <string name="location">Lokalizacja</string>
+    <string name="search">Szukaj</string>
     <string name="budget">Budżet</string>
     <string name="criterion">Kryterium</string>
-    <string name="scale">Skala ważności</string>
+    <string name="scale">Waga kryterium</string>
     <string name="attractiveness">Atrakcyjność widowiska</string>/string>
     <string name="area_attractiveness">Atrakcje w pobliżu rozgrywek </string>
     <string name="ligue_type">Rodzaj rozgrywek </string>

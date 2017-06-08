@@ -1,14 +1,12 @@
 package com.witiw.go4amatch.entities;
 
-import com.witiw.go4amatch.logic.classifier.ConditionType;
-
 /**
  * Created by Patryk on 16.05.2017.
  */
 public class Attractiveness {
 
     private double value;
-    private ConditionType condition;
+    private FormType formType;
     private int position;
     private int importance;
     private int isDerby;
@@ -28,12 +26,12 @@ public class Attractiveness {
         this.value = value;
     }
 
-    public ConditionType getCondition() {
-        return condition;
+    public FormType getFormType() {
+        return formType;
     }
 
-    public void setCondition(ConditionType condition) {
-        this.condition = condition;
+    public void setFormType(FormType formType) {
+        this.formType = formType;
     }
 
     public void setIsDerby(int isDerby) {

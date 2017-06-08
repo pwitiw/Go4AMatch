@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorAccent">#b5a73f</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">#016c87</color>
+    <color name="colorAccent">#c5e779</color>
+    <color name="colorPrimaryDark">#016680</color>
     <color name="colorButtonSearch">#5064e1</color>
     <color name="white">#FFFFFF</color>
-    <color name="text_color">#000000</color>
-    <color name="indicator_color">#000000</color>
-    <color name="progress_color">#000000</color>
-    <color name="ripple_color">#FF7788FF</color>
+    <color name="text_color">#FFFFFF</color>
+    <color name="indicator_color">#b9de30</color>
+    <color name="progress_color">#b9de30</color>
+    <color name="ripple_color">#e2e0b6</color>
+    <color name="versus_color">#e0f7ac</color>
 </resources>

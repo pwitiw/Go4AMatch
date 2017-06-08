@@ -1,15 +1,13 @@
 package com.witiw.go4amatch.utils;
 
 import com.witiw.go4amatch.entities.Attractiveness;
-import com.witiw.go4amatch.entities.LigueType;
+import com.witiw.go4amatch.entities.LeagueType;
 import com.witiw.go4amatch.entities.SportingEvent;
-import com.witiw.go4amatch.rest.sportradar.sdk.Sport;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +27,7 @@ public class XmlPojoConverter {
     private static final String POSITION = "Position";
     private static final String DERBY = "Derby";
     private static final String BUDGET = "Budget";
-    private static final String LIGUE_TYPE = "LigueType";
+    private static final String LIGUE_TYPE = "LeagueType";
     private static final String DISTANCE = "Distance";
     private static final String FORM_HOME = "FormHome";
     private static final String FORM_AWAY = "FormAway";
@@ -52,9 +50,9 @@ public class XmlPojoConverter {
             event.getTeams().setFormHome(attractiveness.getElementsByTagName(FORM_HOME).item(0).getTextContent());
             event.getTeams().setFormAway(attractiveness.getElementsByTagName(FORM_AWAY).item(0).getTextContent());
             /* OTHER */
-            event.setAreaAttractiveness(Double.parseDouble(element.getElementsByTagName(AREA_ATTRACTIVENESS).item(0).getTextContent()));
+            event.setAreaAttractiveness(Integer.parseInt(element.getElementsByTagName(AREA_ATTRACTIVENESS).item(0).getTextContent()));
             event.setBudget(Integer.parseInt(element.getElementsByTagName(BUDGET).item(0).getTextContent()));
-            event.setLigueType(LigueType.getTypeForName(element.getElementsByTagName(LIGUE_TYPE).item(0).getTextContent()));
+            event.setLeagueType(LeagueType.getTypeForName(element.getElementsByTagName(LIGUE_TYPE).item(0).getTextContent()));
             event.setDistance(Double.parseDouble(element.getElementsByTagName(DISTANCE).item(0).getTextContent()));
             events.add(event);
         }
@@ -67,24 +65,24 @@ public class XmlPojoConverter {
         Attractiveness attractiveness = new Attractiveness();
 
 //
-//        Element firstWeatherElement = (Element) firstWeatherNode;
+//        Elem firstWeatherElement = (Elem) firstWeatherNode;
 //        //-------
 //        NodeList idList = firstWeatherElement.getElementsByTagName(KEY_ID);
-//        Element firstIdElement = (Element) idList.item(0);
+//        Elem firstIdElement = (Elem) idList.item(0);
 //        NodeList textIdList = firstIdElement.getChildNodes();
 //        //--id
 //        map.put(KEY_ID, ((Node) textIdList.item(0)).getNodeValue().trim());
 //
 //        //2.-------
 //        NodeList cityList = firstWeatherElement.getElementsByTagName(KEY_CITY);
-//        Element firstCityElement = (Element) cityList.item(0);
+//        Elem firstCityElement = (Elem) cityList.item(0);
 //        NodeList textCityList = firstCityElement.getChildNodes();
 //        //--city
 //        map.put(KEY_CITY, ((Node) textCityList.item(0)).getNodeValue().trim());
 //
 //        //3.-------
 //        NodeList tempList = firstWeatherElement.getElementsByTagName(KEY_TEMP_C);
-//        Element firstTempElement = (Element) tempList.item(0);
+//        Elem firstTempElement = (Elem) tempList.item(0);
 //        NodeList textTempList = firstTempElement.getChildNodes();
 //        //--temperature
 //        map.put(KEY_TEMP_C, ((Node) textTempList.item(0)).getNodeValue().trim());

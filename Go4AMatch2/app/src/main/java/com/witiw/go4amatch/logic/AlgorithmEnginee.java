@@ -1,96 +1,87 @@
 package com.witiw.go4amatch.logic;
 
-import android.content.Context;
+import android.app.ProgressDialog;
+import android.os.AsyncTask;
+import android.util.Log;
 
-import com.squareup.okhttp.ResponseBody;
 import com.witiw.go4amatch.IMainPresenter;
+import com.witiw.go4amatch.entities.Criterion;
+import com.witiw.go4amatch.entities.LeagueType;
 import com.witiw.go4amatch.entities.SportingEvent;
 import com.witiw.go4amatch.logic.ahp.AHPAlgorithm;
 import com.witiw.go4amatch.logic.classifier.BayesClassifier;
-import com.witiw.go4amatch.logic.classifier.Condition;
-import com.witiw.go4amatch.entities.Criterion;
 import com.witiw.go4amatch.logic.promethee.PrometheeAlgorithm;
-import com.witiw.go4amatch.rest.api.GoogleAPI;
-import com.witiw.go4amatch.rest.api.RestServiceFactory;
-import com.witiw.go4amatch.rest.google.PlaceSearchResponse;
-import com.witiw.go4amatch.utils.DataReader;
-import com.witiw.go4amatch.utils.XmlPojoConverter;
-
-import org.w3c.dom.Document;
+import com.witiw.go4amatch.logic.services.FormService;
+import com.witiw.go4amatch.rest.api.sportradar.teaminfo.TeamProfile;
+import com.witiw.go4amatch.rest.impl.GoogleRestService;
+import com.witiw.go4amatch.rest.impl.SportRadarRestService;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
-
-import retrofit.Callback;
-import retrofit.Response;
-import retrofit.Retrofit;
 
 /**
  * Created by Patryk on 25.05.2017.
  */
 
-public class AlgorithmEnginee {
+public class AlgorithmEnginee extends AsyncTask<Criterion, Void, List<SportingEvent>> {
 
     AHPAlgorithm ahpAlgorithm;
     BayesClassifier bayesClassifier;
     PrometheeAlgorithm prometheeAlgorithm;
     IMainPresenter mainPresenter;
+    DataProcessingService dataProcessingService;
+    FormService formService;
 
-
-    public AlgorithmEnginee(IMainPresenter mainPresenter, Context context) {
-        DataReader.setAppContext(context);
+    public AlgorithmEnginee(IMainPresenter mainPresenter) {
+        formService = new FormService();
+        dataProcessingService = new DataProcessingService(mainPresenter);
         this.mainPresenter = mainPresenter;
         ahpAlgorithm = new AHPAlgorithm();
-        try {
-            bayesClassifier = new BayesClassifier();
-        } catch (Exception e) {
-            throw new RuntimeException();
-        }
         prometheeAlgorithm = new PrometheeAlgorithm();
     }
 
-    public void run(List<Criterion> criteria) throws Exception {
-        testRest();
-//        Document testDataDoc = DataReader.readTestData();
-//        if (testDataDoc == null || testDataDoc == null)
-//            throw new RuntimeException();
-//        ahpAlgorithm.compute(criteria);
-//        List<SportingEvent> events = XmlPojoConverter.convert(testDataDoc);
-//        classifyAttractiveness(events);
-//        prometheeAlgorithm.calculateRanking(criteria, events);
-//        mainPresenter.showResults(events);
+    @Override
+    protected void onPreExecute() {
+        super.onPreExecute();
+        mainPresenter.showProgress();
+    }
+
+    @Override
+    protected List<SportingEvent> doInBackground(Criterion... params) {
+        List<SportingEvent> events = new ArrayList<>();
+        try {
+            bayesClassifier = new BayesClassifier();
+            events = run(Arrays.asList(params));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return events;
+    }
+
+
+    public List<SportingEvent> run(List<Criterion> criteria) throws Exception {
+        ahpAlgorithm.compute(criteria);
+        bayesClassifier = new BayesClassifier();
+        List<SportingEvent> events = dataProcessingService.getSportingEventsForLeague(new HashMap<String, TeamProfile>(), LeagueType.ENGLAND);
+        Log.i("#CALL NUMBERS", String.valueOf(GoogleRestService.GOOGLE_REST_SERVICE_COUNTER + SportRadarRestService.SPORT_RADAR_REST_SERVICE_COUNTER));
+        return events;
+    }
+
+    @Override
+    protected void onPostExecute(List<SportingEvent> events) {
+        super.onPostExecute(events);
+        mainPresenter.showResults(events);
     }
 
     private void classifyAttractiveness(List<SportingEvent> events) throws Exception {
         for (int i = 0; i < events.size(); i++) {
             SportingEvent event = events.get(i);
-            event.getAttractiveness().setCondition(Condition.setDownConditionType(event.getTeams().getFormHome(), event.getTeams().getFormAway()));
+            event.getAttractiveness().setFormType(formService.getFormType(event.getTeams().getFormHome(), event.getTeams().getFormAway()));
             event.getAttractiveness().setValue(bayesClassifier.classify(event.getAttractiveness()));
         }
-    }
-
-    public void run() {
-
-    }
-
-    public void testRest() {
-//"New+York"
-        GoogleAPI http = RestServiceFactory.getGoogleAPI(GoogleAPI.class);
-        http.getAttractionsForCity().enqueue(new Callback<PlaceSearchResponse>() {
-            @Override
-            public void onResponse(Response<PlaceSearchResponse> response, Retrofit retrofit) {
-                if (response.code() == 200) {
-                    System.out.print("bad request");
-                } else {
-                    response.body();
-                }
-            }
-
-            @Override
-            public void onFailure(Throwable t) {
-
-            }
-        });
     }
 
 

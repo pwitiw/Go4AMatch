@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="75dip"
         android:text="Manchster United"
-        android:textColor="#040404"
+        android:textColor="@color/text_color"
         android:textSize="25dip"
         android:textStyle="bold"
         android:typeface="sans" />
@@ -47,10 +47,9 @@
         android:layout_marginBottom="10dp"
         android:layout_below="@+id/tvTeamHome"
         android:layout_centerHorizontal="true"
-
         android:text="vs"
-        android:textColor="#343434"
-        android:textSize="15dip" />
+        android:textColor="@color/versus_color"
+        android:textSize="18dip" />
     <TextView
         android:id="@+id/tvTeamAway"
         android:layout_width="wrap_content"
@@ -61,7 +60,7 @@
         android:layout_centerHorizontal="true"
         android:paddingTop="5dip"
         android:text="Ajax Amsterdam"
-        android:textColor="#040404"
+        android:textColor="@color/text_color"
         android:textSize="25dip"
         android:textStyle="bold"
         android:typeface="sans" />

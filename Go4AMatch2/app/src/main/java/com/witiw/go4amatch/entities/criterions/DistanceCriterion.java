@@ -1,7 +1,7 @@
 package com.witiw.go4amatch.entities.criterions;
 
 import com.witiw.go4amatch.entities.SportingEvent;
-import com.witiw.go4amatch.logic.ahp.Importance;
+import com.witiw.go4amatch.entities.Importance;
 import com.witiw.go4amatch.entities.Criterion;
 
 /**

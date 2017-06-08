@@ -1,9 +1,9 @@
-package com.witiw.go4amatch.logic.classifier;
+package com.witiw.go4amatch.entities;
 
 /**
  * Created by Patryk on 16.05.2017.
  */
-public enum ConditionType {
+public enum FormType {
 
     GOOD("Good"),
     MEDIUM("Medium"),
@@ -11,7 +11,7 @@ public enum ConditionType {
 
     private String name;
 
-    ConditionType(String name) {
+    FormType(String name) {
         this.name = name;
     }
 

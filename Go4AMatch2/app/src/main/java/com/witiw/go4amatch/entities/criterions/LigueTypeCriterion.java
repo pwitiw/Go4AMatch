@@ -1,7 +1,7 @@
 package com.witiw.go4amatch.entities.criterions;
 
 import com.witiw.go4amatch.entities.SportingEvent;
-import com.witiw.go4amatch.logic.ahp.Importance;
+import com.witiw.go4amatch.entities.Importance;
 import com.witiw.go4amatch.entities.Criterion;
 
 /**
@@ -19,6 +19,6 @@ public class LigueTypeCriterion extends Criterion {
 
     @Override
     public double preferenceFunction(SportingEvent event1, SportingEvent event2) {
-        return function(event1.getLigueType().getUefaCoefficient(),event2.getLigueType().getUefaCoefficient());
+        return function(event1.getLeagueType().getUefaCoefficient(),event2.getLeagueType().getUefaCoefficient());
     }
 }

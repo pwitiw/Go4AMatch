@@ -3,7 +3,6 @@ package com.witiw.go4amatch.logic.promethee;
 
 import com.witiw.go4amatch.entities.Criterion;
 import com.witiw.go4amatch.entities.SportingEvent;
-import com.witiw.go4amatch.rest.sportradar.sdk.Sport;
 
 import java.util.Collections;
 import java.util.Comparator;
@@ -24,7 +23,6 @@ public class PrometheeAlgorithm {
         sortResults(events);
     }
 
-    //todo body
     private double[][] pairwaiseComparationAlternatives(List<Criterion> criterias, List<SportingEvent> events) {
         double[][] preferenceMatrix = new double[events.size()][events.size()];
         for (int i = 0; i < events.size(); i++) {

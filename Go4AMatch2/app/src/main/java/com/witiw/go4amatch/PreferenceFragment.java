@@ -1,17 +1,25 @@
 package com.witiw.go4amatch;
 
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.support.v4.app.Fragment;
+import android.text.InputType;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
+import android.text.style.RelativeSizeSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
-import android.widget.SeekBar;
+import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.TextView;
 
-import com.witiw.go4amatch.logic.ahp.Importance;
 import com.witiw.go4amatch.entities.Criterion;
+import com.witiw.go4amatch.entities.Importance;
 import com.witiw.go4amatch.entities.criterions.AttractivenessCriterion;
 import com.witiw.go4amatch.entities.criterions.BudgetCriterion;
 import com.witiw.go4amatch.entities.criterions.DistanceCriterion;
@@ -28,24 +36,26 @@ import java.util.List;
 
 public class PreferenceFragment extends Fragment {
 
-    DiscreteSeekBar budget;
-    DiscreteSeekBar attractiveness;
-    DiscreteSeekBar areaAttractiveness;
-    DiscreteSeekBar ligueType;
-    DiscreteSeekBar distance;
-    Button searchButton;
-    IMainPresenter presenter;
-    ProgressDialog ps;
+    private DiscreteSeekBar budget;
+    private DiscreteSeekBar attractiveness;
+    private DiscreteSeekBar areaAttractiveness;
+    private DiscreteSeekBar ligueType;
+    private DiscreteSeekBar distance;
+    private Button searchButton;
+    private AutoCompleteTextView textView;
+    private IMainPresenter presenter;
+    private ProgressDialog mProgressDialog;
 
     PreferenceFragment(IMainPresenter presenter) {
         this.presenter = presenter;
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, final ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_preferences, container, false);
         searchButton = (Button) view.findViewById(R.id.btSearch);
-
+        textView = (AutoCompleteTextView) view.findViewById(R.id.tvLocation);
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -107,4 +117,28 @@ public class PreferenceFragment extends Fragment {
         };
     }
 
+    public void initializeProgressDialog(Context context) {
+        mProgressDialog = new ProgressDialog(context);
+        mProgressDialog.setTitle(createSpinnableString("Proszę czekać..."));
+        mProgressDialog.setMessage(createSpinnableString("Trwa przetwarzaznie danych."));
+        mProgressDialog.setCancelable(false);
+        mProgressDialog.setIndeterminate(true);
+        mProgressDialog.show();
+    }
+
+    public void cancelProgressDialog() {
+        mProgressDialog.cancel();
+    }
+
+    private SpannableString createSpinnableString(String text) {
+        SpannableString spannableString = new SpannableString(text);
+        spannableString.setSpan(new RelativeSizeSpan(2f), 0, spannableString.length(), 0);
+//        spannableString.setSpan(new ForegroundColorSpan(Color.BLACK), 0, spannableString.length(), 0);
+
+        return spannableString;
+    }
+
+    public String getLocationText() {
+        return textView.getText().toString();
+    }
 }
