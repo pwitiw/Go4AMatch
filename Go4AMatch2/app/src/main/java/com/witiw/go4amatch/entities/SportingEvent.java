@@ -6,7 +6,7 @@ package com.witiw.go4amatch.entities;
 public class SportingEvent {
     private double result;
     Teams teams;
-    private int budget;
+    private double budget;
     private double distance;
     private LeagueType leagueType;
     private int areaAttractiveness;
@@ -30,7 +30,7 @@ public class SportingEvent {
         this.attractiveness = sportingEvent.attractiveness;
     }
 
-    public SportingEvent(Teams teams, int budget, double distance, LeagueType leagueType, int areaAttractiveness, Attractiveness attractiveness) {
+    public SportingEvent(Teams teams, double budget, double distance, LeagueType leagueType, int areaAttractiveness, Attractiveness attractiveness) {
 
         this.teams = teams;
         this.budget = budget;
@@ -52,11 +52,11 @@ public class SportingEvent {
         this.teams = teams;
     }
 
-    public int getBudget() {
+    public double getBudget() {
         return budget;
     }
 
-    public void setBudget(int budget) {
+    public void setBudget(double budget) {
         this.budget = budget;
     }
 
@@ -95,7 +95,7 @@ public class SportingEvent {
 
     public static class SportingEventBuilder {
         Teams teams;
-        private int budget;
+        private double budget;
         private double distance;
         private LeagueType leagueType;
         private int areaAttractiveness;
@@ -111,7 +111,7 @@ public class SportingEvent {
             return this;
         }
 
-        public SportingEventBuilder withBudget(int budget) {
+        public SportingEventBuilder withBudget(double budget) {
             this.budget = budget;
             return this;
         }

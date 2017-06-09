@@ -51,4 +51,8 @@ public class TeamProfile {
     public void setRank(int rank) {
         this.rank = rank;
     }
+
+    public String getCountryCode() {
+        return team.getCountryCode();
+    }
 }

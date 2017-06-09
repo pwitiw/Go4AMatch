@@ -2,10 +2,6 @@ package com.witiw.go4amatch.logic.services;
 
 import com.witiw.go4amatch.entities.GameType;
 import com.witiw.go4amatch.entities.LeagueType;
-import com.witiw.go4amatch.rest.api.sportradar.gameschedule.SportEvent;
-import com.witiw.go4amatch.rest.api.sportradar.teaminfo.TeamProfile;
-
-import java.util.Map;
 
 /**
  * Created by Patryk on 04.06.2017.
@@ -13,46 +9,42 @@ import java.util.Map;
 
 public class ImportanceService {
     //todo test
-    public int getImportance(SportEvent sportEvent, Map<String, TeamProfile> teamsMap, LeagueType leagueType) {
-        TeamProfile home = teamsMap.get(sportEvent.getHomeTeam().getId());
-        TeamProfile away = teamsMap.get(sportEvent.getAwayTeam().getId());
+    public int getImportance(FactoryClass.Data data) {
 
-        if (isChampionsLeagueAndGroup(leagueType, sportEvent) || areTeamsInTop3(home, away) || isCup(sportEvent))
+        if (isChampionsLeagueAndGroup(data) || areTeamsInTop3(data) || isCup(data))
             return 2;
-        else if (isChampionsLeagueAndQualification(leagueType, sportEvent)
-                || isEuropeLeagueAndGroup(leagueType, sportEvent)
-                || (isTeamInTop3(home) || isTeamInTop3(away)))
+        else if (isChampionsLeagueAndQualification(data)
+                || isEuropeLeagueAndGroup(data)
+                || (isTeamInTop3(data.getHomeRank()) || isTeamInTop3(data.getAwayRank())))
             return 1;
         else
             return 0;
     }
 
-    private boolean isEuropeLeagueAndGroup(LeagueType leagueType, SportEvent sportEvent) {
-        return leagueType.getLeagueName().equals(LeagueType.EUROPE) && sportEvent.getTournamentRound().getType().equals(GameType.group);
+    private boolean isEuropeLeagueAndGroup(FactoryClass.Data data) {
+        return LeagueType.EUROPE == data.getLeagueType() && GameType.group == data.getGameType();
     }
 
-    private boolean isChampionsLeagueAndGroup(LeagueType leagueType, SportEvent sportEvent) {
-        return leagueType.getLeagueName().equals(LeagueType.CHAMPIONS_LEAGUE)
-                && sportEvent.getTournamentRound().getType().equals(GameType.group);
+    private boolean isChampionsLeagueAndGroup(FactoryClass.Data data) {
+        return LeagueType.CHAMPIONS_LEAGUE == data.getLeagueType() && GameType.group == data.getGameType();
     }
 
 
-    private boolean isCup(SportEvent sportEvent) {
-        return sportEvent.getTournamentRound().getType().equals(GameType.cup);
+    private boolean isCup(FactoryClass.Data data) {
+        return GameType.cup == data.getGameType();
 
     }
 
-    private boolean areTeamsInTop3(TeamProfile teamProfile1, TeamProfile teamProfile2) {
-        return isTeamInTop3(teamProfile1) && isTeamInTop3(teamProfile2);
+    private boolean areTeamsInTop3(FactoryClass.Data data) {
+        return isTeamInTop3(data.getHomeRank()) && isTeamInTop3(data.getAwayRank());
     }
 
-    private boolean isTeamInTop3(TeamProfile teamProfile) {
-        return teamProfile.getRank() <= 3;
+    private boolean isTeamInTop3(int rank) {
+        return rank <= 3;
     }
 
-    private boolean isChampionsLeagueAndQualification(LeagueType leagueType, SportEvent sportEvent) {
-        return sportEvent.getTournamentRound().getType().equals(GameType.qualification)
-                && LeagueType.CHAMPIONS_LEAGUE.equals(leagueType);
+    private boolean isChampionsLeagueAndQualification(FactoryClass.Data data) {
+        return GameType.qualification == data.getGameType() && LeagueType.CHAMPIONS_LEAGUE == data.getLeagueType();
     }
 
 }

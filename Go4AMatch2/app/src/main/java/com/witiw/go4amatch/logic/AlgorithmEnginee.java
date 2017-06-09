@@ -65,7 +65,7 @@ public class AlgorithmEnginee extends AsyncTask<Criterion, Void, List<SportingEv
     public List<SportingEvent> run(List<Criterion> criteria) throws Exception {
         ahpAlgorithm.compute(criteria);
         bayesClassifier = new BayesClassifier();
-        List<SportingEvent> events = dataProcessingService.getSportingEventsForLeague(new HashMap<String, TeamProfile>(), LeagueType.ENGLAND);
+        List<SportingEvent> events = dataProcessingService.getSportingEventsForLeague(LeagueType.ENGLAND);
         Log.i("#CALL NUMBERS", String.valueOf(GoogleRestService.GOOGLE_REST_SERVICE_COUNTER + SportRadarRestService.SPORT_RADAR_REST_SERVICE_COUNTER));
         return events;
     }

@@ -1,6 +1,9 @@
 package com.witiw.go4amatch.rest.api.sportradar;
 
+import com.witiw.go4amatch.rest.api.sportradar.teaminfo.Category;
+
 import org.simpleframework.xml.Attribute;
+import org.simpleframework.xml.Element;
 import org.simpleframework.xml.Root;
 
 /**
@@ -18,6 +21,9 @@ public class Team {
     @Attribute(required = false)
     private String name;
 
+    @Element
+    private Category category;
+
     public String getId() {
         return id;
     }
@@ -28,5 +34,9 @@ public class Team {
 
     public String getName() {
         return name;
+    }
+
+    public String getCountryCode() {
+        return category.getCountryCode();
     }
 }

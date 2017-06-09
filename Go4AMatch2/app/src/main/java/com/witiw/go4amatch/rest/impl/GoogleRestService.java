@@ -14,11 +14,12 @@ public class GoogleRestService {
 
     private static GoogleAPI googleAPI = RestServiceFactory.getSportRadarAPI(GoogleAPI.class);
 
-    public static int GOOGLE_REST_SERVICE_COUNTER =0;
+    public static int GOOGLE_REST_SERVICE_COUNTER = 0;
 
-    public static PlaceSearchResponse getAttractionsForCity(String city) throws IOException {
+    public static int getAttractionsForCity(String city) throws IOException {
         GOOGLE_REST_SERVICE_COUNTER++;
-        return googleAPI.getAttractionsForCity(city).execute().body();
+        PlaceSearchResponse placeSearchResponse = googleAPI.getAttractionsForCity(city).execute().body();
+        return placeSearchResponse.getResults().size();
 
     }
 
