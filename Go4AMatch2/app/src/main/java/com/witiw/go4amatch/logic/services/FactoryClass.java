@@ -22,9 +22,9 @@ import java.util.Map;
 public class FactoryClass {
 
     String startingPosition;
-    HashMap<String, Integer> distanceMap = new HashMap<>();
-    HashMap<String, Integer> areaAttractivenessMap = new HashMap<>();
-    Map<String, TeamProfile> teamMap = new HashMap<>();
+    static HashMap<String, Integer> distanceMap = new HashMap<>();
+    static HashMap<String, Integer> areaAttractivenessMap = new HashMap<>();
+    static Map<String, TeamProfile> teamMap = new HashMap<>();
 
     public void setStartingPosition(String startingPosition) {
         this.startingPosition = startingPosition;
@@ -35,10 +35,10 @@ public class FactoryClass {
         cacheTeams(sportEvent, tournamentStandings, leagueType);
         cacheDistance(sportEvent);
         cacheAreaAttractiveness(sportEvent);
-        return createData(sportEvent);
+        return createData(sportEvent, leagueType);
     }
 
-    public Data createData(SportEvent sportEvent) {
+    public Data createData(SportEvent sportEvent, LeagueType leagueType) {
         String season = sportEvent.getSeason();
         Data data = new Data();
         TeamProfile home = teamMap.get(sportEvent.getHomeTeam().getId());
@@ -46,16 +46,19 @@ public class FactoryClass {
         data.setHomeTeamName(home.getTeamName());
         data.setHomeTeamForm(home.getFormForSeason(season));
         data.setHomeTeamCityName(home.getCity());
+        data.setHomeTeamCountryCode(home.getCountryCode());
         data.setHomeRank(home.getRank());
         data.setAwayTeamName(away.getTeamName());
         data.setAwayTeamForm(away.getFormForSeason(season));
         data.setAwayTeamCityName(away.getCity());
+        data.setAwayTeamCountryCode(away.getCountryCode());
         data.setAwayRank(away.getRank());
-        data.setBudget(CountryBudget.getBudget(home.getCountryCode()));
+        data.setBudget(CountryBudget.getBudget(home.getCountryCode(), leagueType));
         data.setPosition(Math.abs(away.getRank() - home.getRank()));
         data.setGameType(sportEvent.getTournamentRound().getType());
-        data.setDistance(distanceMap.get(home));
-        data.setAreaAttractiveness(areaAttractivenessMap.get(home));
+        data.setDistance(distanceMap.get(home.getCity()));
+        data.setAreaAttractiveness(areaAttractivenessMap.get(home.getCity()));
+        data.setLeagueType(leagueType);
         return data;
     }
 
@@ -71,23 +74,22 @@ public class FactoryClass {
     }
 
     private void cacheDistance(SportEvent event) throws IOException {
-        String home = event.getHomeTeam().getName();
-        if (!distanceMap.containsKey(home)) {
-            if (startingPosition.equals(""))
-                throw new IllegalArgumentException();
-            String destination = home.replace(" ", "+");
+        TeamProfile homeTeam = teamMap.get(event.getHomeTeam().getId());
+        String homeCity = homeTeam.getCity();
+        if (!distanceMap.containsKey(homeCity)) {
+            String destination = homeCity.replace(" ", "+") + "," + homeTeam.getCountryName();
             String start = startingPosition.replace(" ", "+");
-            int distance = GoogleRestService.getDistanceBetweenCities(destination, start);
-            distanceMap.put(home, distance);
+            int distance = GoogleRestService.getDistanceBetweenCities(start, destination);
+            distanceMap.put(homeCity, distance);
         }
     }
 
     private void cacheAreaAttractiveness(SportEvent event) throws IOException {
-        String home = event.getHomeTeam().getName();
-        if (!areaAttractivenessMap.containsKey(home)) {
-            String destination = home.replace(" ", "+");
+        String homeCity = teamMap.get(event.getHomeTeam().getId()).getCity();
+        if (!areaAttractivenessMap.containsKey(homeCity)) {
+            String destination = homeCity.replace(" ", "+");
             int areaAttractiveness = GoogleRestService.getAttractionsForCity(destination);
-            distanceMap.put(home, areaAttractiveness);
+            areaAttractivenessMap.put(homeCity, areaAttractiveness);
         }
     }
 
@@ -105,10 +107,12 @@ public class FactoryClass {
         private String homeTeamName;
         private String homeTeamForm;
         private String homeTeamCityName;
+        private String homeTeamCountryCode;
         private int homeRank;
         private String awayTeamName;
         private String awayTeamForm;
         private String awayTeamCityName;
+        private String awayTeamCountryCode;
         private int awayRank;
         private double budget;
         private int position;
@@ -227,6 +231,22 @@ public class FactoryClass {
 
         public void setAreaAttractiveness(int areaAttractiveness) {
             this.areaAttractiveness = areaAttractiveness;
+        }
+
+        public String getHomeTeamCountryCode() {
+            return homeTeamCountryCode;
+        }
+
+        public void setHomeTeamCountryCode(String homeTeamCountryCode) {
+            this.homeTeamCountryCode = homeTeamCountryCode;
+        }
+
+        public String getAwayTeamCountryCode() {
+            return awayTeamCountryCode;
+        }
+
+        public void setAwayTeamCountryCode(String awayTeamCountryCode) {
+            this.awayTeamCountryCode = awayTeamCountryCode;
         }
     }
 }

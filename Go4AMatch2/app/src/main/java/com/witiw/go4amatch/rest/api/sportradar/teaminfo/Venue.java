@@ -12,8 +12,11 @@ public class Venue {
     @Attribute(name = "city_name")
     private String cityName;
 
-    @Attribute(name = "map_coordinates")
+    @Attribute(name = "map_coordinates", required = false)
     private double[] mapCoordinates;
+
+    @Attribute(name = "country_name")
+    private String countryName;
 
     public String getCityName() {
         return cityName;
@@ -21,5 +24,9 @@ public class Venue {
 
     public double[] getMapCoordinates() {
         return mapCoordinates;
+    }
+
+    public String getCountryName() {
+        return countryName;
     }
 }

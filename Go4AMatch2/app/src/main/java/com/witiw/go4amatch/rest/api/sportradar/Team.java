@@ -21,7 +21,7 @@ public class Team {
     @Attribute(required = false)
     private String name;
 
-    @Element
+    @Element(required = false)
     private Category category;
 
     public String getId() {

@@ -1,6 +1,8 @@
 package com.witiw.go4amatch.logic.classifier;
 
 
+import android.util.Log;
+
 import com.witiw.go4amatch.entities.Attractiveness;
 import com.witiw.go4amatch.utils.DataReader;
 
@@ -43,7 +45,7 @@ public class BayesClassifier {
             else
                 System.out.println(testInstance.toString());
         }
-        System.out.println("Accuracy:  " + Math.round(accuracyCounter * 1000 / (double) instances.numInstances()) / 10.0);
+        Log.i("Accuracy:  " , String.valueOf(Math.round(accuracyCounter * 1000 / (double) instances.numInstances()) / 10.0));
     }
 
     private Instances getInstancesWithout(int index) {
@@ -63,10 +65,10 @@ public class BayesClassifier {
         Instance instance = new Instance(instances.numAttributes());
         instance.setDataset(instances);
         instances.add(instance);
-        instance.setValue(0,attractiveness.getFormType().getName());
-        instance.setValue(1,attractiveness.getImportance());
-        instance.setValue(2,attractiveness.getPosition());
-        instance.setValue(3,attractiveness.getIsDerby());
+        instance.setValue(0, attractiveness.getFormType().getName());
+        instance.setValue(1, attractiveness.getImportance());
+        instance.setValue(2, attractiveness.getPosition());
+        instance.setValue(3, attractiveness.getIsDerby());
 
         return instance;
     }

@@ -17,6 +17,8 @@ public class Season {
     private Form form;
 
     public String getForm() {
+        if (form == null)
+            return null;
         return form.getTotal();
     }
 

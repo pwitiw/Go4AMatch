@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Sport>
+    <!-- ATRAKCYJNOSC -> 	0.8795867175867103 -->
+    <SportingEvent away="Club Brugge" home="RSC Anderlecht">
+        <Attractiveness>
+            <FormHome>DWDWW</FormHome>
+            <FormAway>WWDLW</FormAway>
+            <Importance>2</Importance>
+            <Position>1</Position>
+            <Derby>1</Derby>
+        </Attractiveness>
+        <Budget>401.0</Budget>
+        <AreaAttractiveness>20</AreaAttractiveness>
+        <LeagueType>Pro League</LeagueType>
+        <LeaguePoints>38.4</LeaguePoints>
+        <Distance>1051367.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.8795867175867103 -->
+    <SportingEvent away="Standard Liege" home="RSC Anderlecht">
+        <Attractiveness>
+            <FormHome>DWDWW</FormHome>
+            <FormAway>WLWWW</FormAway>
+            <Importance>2</Importance>
+            <Position>2</Position>
+            <Derby>1</Derby>
+        </Attractiveness>
+        <Budget>401.0</Budget>
+        <AreaAttractiveness>20</AreaAttractiveness>
+        <LeagueType>Pro League</LeagueType>
+        <LeaguePoints>38.4</LeaguePoints>
+        <Distance>1051367.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.8270278920465777 -->
+    <SportingEvent away="RSC Anderlecht" home="KRC Genk">
+        <Attractiveness>
+            <FormHome>WWWWD</FormHome>
+            <FormAway>DWDWW</FormAway>
+            <Importance>2</Importance>
+            <Position>2</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>401.0</Budget>
+        <AreaAttractiveness>20</AreaAttractiveness>
+        <LeagueType>Pro League</LeagueType>
+        <LeaguePoints>38.4</LeaguePoints>
+        <Distance>962288.0</Distance>
+    </SportingEvent>
+
+    <!-- ATRAKCYJNOSC -> 	0.5936522523275157 -->
+    <SportingEvent away="FC Dynamo Kiev" home="Karpaty Lviv">
+        <Attractiveness>
+            <FormHome>LWLWW</FormHome>
+            <FormAway>WLLWW</FormAway>
+            <Importance>2</Importance>
+            <Position>3</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>171.0</Budget>
+        <AreaAttractiveness>20</AreaAttractiveness>
+        <LeagueType>Premier League</LeagueType>
+        <LeaguePoints>42.233</LeaguePoints>
+        <Distance>595838.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.8795867175867103 -->
+    <SportingEvent away="FC Dynamo Kiev" home="FC Shakhtar Donetsk">
+        <Attractiveness>
+            <FormHome>WWDLD</FormHome>
+            <FormAway>WLLWW</FormAway>
+            <Importance>2</Importance>
+            <Position>1</Position>
+            <Derby>1</Derby>
+        </Attractiveness>
+        <Budget>171.0</Budget>
+        <AreaAttractiveness>20</AreaAttractiveness>
+        <LeagueType>Premier League</LeagueType>
+        <LeaguePoints>42.233</LeaguePoints>
+        <Distance>1608762.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.5936522523275157 -->
+    <SportingEvent away="FC Zorya Lugansk" home="FC Shakhtar Donetsk">
+        <Attractiveness>
+            <FormHome>WWDLD</FormHome>
+            <FormAway>LWWWW</FormAway>
+            <Importance>2</Importance>
+            <Position>2</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>171.0</Budget>
+        <AreaAttractiveness>20</AreaAttractiveness>
+        <LeagueType>Premier League</LeagueType>
+        <LeaguePoints>42.233</LeaguePoints>
+        <Distance>1608762.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.9598496684183501 -->
+    <SportingEvent away="Borussia Dortmund" home="Bayern Munich">
+        <Attractiveness>
+            <FormHome>DWWWW</FormHome>
+            <FormAway>WDWDW</FormAway>
+            <Importance>2</Importance>
+            <Position>2</Position>
+            <Derby>1</Derby>
+        </Attractiveness>
+        <Budget>326.0</Budget>
+        <AreaAttractiveness>20</AreaAttractiveness>
+        <LeagueType>Bundesliga</LeagueType>
+        <LeaguePoints>76.498</LeaguePoints>
+        <Distance>719896.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.9240960952231603 -->
+    <SportingEvent away="FC Schalke 04" home="Borussia Dortmund">
+        <Attractiveness>
+            <FormHome>WDWDW</FormHome>
+            <FormAway>DWLDD</FormAway>
+            <Importance>1</Importance>
+            <Position>7</Position>
+            <Derby>1</Derby>
+        </Attractiveness>
+        <Budget>326.0</Budget>
+        <AreaAttractiveness>20</AreaAttractiveness>
+        <LeagueType>Bundesliga</LeagueType>
+        <LeaguePoints>76.498</LeaguePoints>
+        <Distance>774411.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.7088716042355551 -->
+    <SportingEvent away="Bayern Munich" home="Hertha BSC">
+        <Attractiveness>
+            <FormHome>WLLWL</FormHome>
+            <FormAway>DWWWW</FormAway>
+            <Importance>1</Importance>
+            <Position>5</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>326.0</Budget>
+        <AreaAttractiveness>12</AreaAttractiveness>
+        <LeagueType>Bundesliga</LeagueType>
+        <LeaguePoints>76.498</LeaguePoints>
+        <Distance>344045.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.7088716042355551 -->
+    <SportingEvent away="VfL Wolfsburg" home="Bayern Munich">
+        <Attractiveness>
+            <FormHome>DWWWW</FormHome>
+            <FormAway>LLWDL</FormAway>
+            <Importance>1</Importance>
+            <Position>15</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>326.0</Budget>
+        <AreaAttractiveness>20</AreaAttractiveness>
+        <LeagueType>Bundesliga</LeagueType>
+        <LeaguePoints>76.498</LeaguePoints>
+        <Distance>719896.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.3469401455587981 -->
+    <SportingEvent away="Juventus Turin" home="Udinese Calcio">
+        <Attractiveness>
+            <FormHome>LDLDL</FormHome>
+            <FormAway>DDLWW</FormAway>
+            <Importance>1</Importance>
+            <Position>12</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>417.0</Budget>
+        <AreaAttractiveness>20</AreaAttractiveness>
+        <LeagueType>Serie A</LeagueType>
+        <LeaguePoints>69.998</LeaguePoints>
+        <Distance>1014801.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.7088716042355551 -->
+    <SportingEvent away="SSC Napoli" home="AC Milan">
+        <Attractiveness>
+            <FormHome>DLDWL</FormHome>
+            <FormAway>WWWWW</FormAway>
+            <Importance>1</Importance>
+            <Position>3</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>417.0</Budget>
+        <AreaAttractiveness>17</AreaAttractiveness>
+        <LeagueType>Serie A</LeagueType>
+        <LeaguePoints>69.998</LeaguePoints>
+        <Distance>1170872.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.9598496684183501 -->
+    <SportingEvent away="SSC Napoli" home="AS Roma">
+        <Attractiveness>
+            <FormHome>LWWWW</FormHome>
+            <FormAway>WWWWW</FormAway>
+            <Importance>2</Importance>
+            <Position>1</Position>
+            <Derby>1</Derby>
+        </Attractiveness>
+        <Budget>417.0</Budget>
+        <AreaAttractiveness>16</AreaAttractiveness>
+        <LeagueType>Serie A</LeagueType>
+        <LeaguePoints>69.998</LeaguePoints>
+        <Distance>1636512.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.9240960952231603 -->
+    <SportingEvent away="AS Roma" home="Lazio Roma">
+        <Attractiveness>
+            <FormHome>WWLLL</FormHome>
+            <FormAway>LWWWW</FormAway>
+            <Importance>1</Importance>
+            <Position>3</Position>
+            <Derby>1</Derby>
+        </Attractiveness>
+        <Budget>417.0</Budget>
+        <AreaAttractiveness>16</AreaAttractiveness>
+        <LeagueType>Serie A</LeagueType>
+        <LeaguePoints>69.998</LeaguePoints>
+        <Distance>1636512.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.8270278920465777 -->
+    <SportingEvent away="Juventus Turin" home="SSC Napoli">
+        <Attractiveness>
+            <FormHome>WWWWW</FormHome>
+            <FormAway>DDLWW</FormAway>
+            <Importance>2</Importance>
+            <Position>2</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>417.0</Budget>
+        <AreaAttractiveness>14</AreaAttractiveness>
+        <LeagueType>Serie A</LeagueType>
+        <LeaguePoints>69.998</LeaguePoints>
+        <Distance>1835971.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.9240960952231603 -->
+    <SportingEvent away="Olympique Lyon" home="Paris Saint-Germain">
+        <Attractiveness>
+            <FormHome>WLWWD</FormHome>
+            <FormAway>LWWWD</FormAway>
+            <Importance>1</Importance>
+            <Position>2</Position>
+            <Derby>1</Derby>
+        </Attractiveness>
+        <Budget>431.0</Budget>
+        <AreaAttractiveness>20</AreaAttractiveness>
+        <LeagueType>Ligue 1</LeagueType>
+        <LeaguePoints>52.999</LeaguePoints>
+        <Distance>1285009.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.8885023411980058 -->
+    <SportingEvent away="AS Monaco" home="FC Metz">
+        <Attractiveness>
+            <FormHome>LWWDL</FormHome>
+            <FormAway>WWWWW</FormAway>
+            <Importance>1</Importance>
+            <Position>13</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>431.0</Budget>
+        <AreaAttractiveness>10</AreaAttractiveness>
+        <LeagueType>Ligue 1</LeagueType>
+        <LeaguePoints>52.999</LeaguePoints>
+        <Distance>959922.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.8885023411980058 -->
+    <SportingEvent away="AS Monaco" home="Lille OSC">
+        <Attractiveness>
+            <FormHome>WWLLW</FormHome>
+            <FormAway>WWWWW</FormAway>
+            <Importance>1</Importance>
+            <Position>10</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>431.0</Budget>
+        <AreaAttractiveness>6</AreaAttractiveness>
+        <LeagueType>Ligue 1</LeagueType>
+        <LeaguePoints>52.999</LeaguePoints>
+        <Distance>1162607.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.8270278920465777 -->
+    <SportingEvent away="Paris Saint-Germain" home="AS Monaco">
+        <Attractiveness>
+            <FormHome>WWWWW</FormHome>
+            <FormAway>WLWWD</FormAway>
+            <Importance>2</Importance>
+            <Position>1</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>431.0</Budget>
+        <AreaAttractiveness>7</AreaAttractiveness>
+        <LeagueType>Ligue 1</LeagueType>
+        <LeaguePoints>52.999</LeaguePoints>
+        <Distance>1468561.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.8270278920465777 -->
+    <SportingEvent away="Atletico Madrid" home="FC Barcelona">
+        <Attractiveness>
+            <FormHome>WWWWW</FormHome>
+            <FormAway>LWWDW</FormAway>
+            <Importance>2</Importance>
+            <Position>1</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>433.0</Budget>
+        <AreaAttractiveness>17</AreaAttractiveness>
+        <LeagueType>Primera Divison</LeagueType>
+        <LeaguePoints>98.284</LeaguePoints>
+        <Distance>2001449.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.9598496684183501 -->
+    <SportingEvent away="Real Madrid" home="FC Barcelona">
+        <Attractiveness>
+            <FormHome>WWWWW</FormHome>
+            <FormAway>WWWWW</FormAway>
+            <Importance>2</Importance>
+            <Position>1</Position>
+            <Derby>1</Derby>
+        </Attractiveness>
+        <Budget>433.0</Budget>
+        <AreaAttractiveness>17</AreaAttractiveness>
+        <LeagueType>Primera Divison</LeagueType>
+        <LeaguePoints>98.284</LeaguePoints>
+        <Distance>2001449.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.9598496684183501 -->
+    <SportingEvent away="Real Madrid" home="Atletico Madrid">
+        <Attractiveness>
+            <FormHome>LWWDW</FormHome>
+            <FormAway>WWWWW</FormAway>
+            <Importance>2</Importance>
+            <Position>2</Position>
+            <Derby>1</Derby>
+        </Attractiveness>
+        <Budget>433.0</Budget>
+        <AreaAttractiveness>12</AreaAttractiveness>
+        <LeagueType>Primera Divison</LeagueType>
+        <LeaguePoints>98.284</LeaguePoints>
+        <Distance>2569642.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.8885023411980058 -->
+    <SportingEvent away="FC Barcelona" home="Athletic Bilbao">
+        <Attractiveness>
+            <FormHome>WWLDL</FormHome>
+            <FormAway>WWWWW</FormAway>
+            <Importance>1</Importance>
+            <Position>5</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>433.0</Budget>
+        <AreaAttractiveness>17</AreaAttractiveness>
+        <LeagueType>Primera Divison</LeagueType>
+        <LeaguePoints>98.284</LeaguePoints>
+        <Distance>2213857.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.7088716042355551 -->
+    <SportingEvent away="Atletico Madrid" home="Villarreal CF">
+        <Attractiveness>
+            <FormHome>WWLDW</FormHome>
+            <FormAway>LWWDW</FormAway>
+            <Importance>1</Importance>
+            <Position>2</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>433.0</Budget>
+        <AreaAttractiveness>6</AreaAttractiveness>
+        <LeagueType>Primera Divison</LeagueType>
+        <LeaguePoints>98.284</LeaguePoints>
+        <Distance>2278313.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.9240960952231603 -->
+    <SportingEvent away="Manchester City" home="Manchester United">
+        <Attractiveness>
+            <FormHome>DLLDW</FormHome>
+            <FormAway>DWWWW</FormAway>
+            <Importance>1</Importance>
+            <Position>3</Position>
+            <Derby>1</Derby>
+        </Attractiveness>
+        <Budget>646.0</Budget>
+        <AreaAttractiveness>2261</AreaAttractiveness>
+        <LeagueType>Premier League</LeagueType>
+        <LeaguePoints>72.391</LeaguePoints>
+        <Distance>1726569.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.9598496684183501 -->
+    <SportingEvent away="Chelsea FC" home="Tottenham Hotspur">
+        <Attractiveness>
+            <FormHome>WLWWW</FormHome>
+            <FormAway>WWWWW</FormAway>
+            <Importance>2</Importance>
+            <Position>1</Position>
+            <Derby>1</Derby>
+        </Attractiveness>
+        <Budget>646.0</Budget>
+        <AreaAttractiveness>22631</AreaAttractiveness>
+        <LeagueType>Premier League</LeagueType>
+        <LeaguePoints>72.391</LeaguePoints>
+        <Distance>1382860.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.7399895557839058 -->
+    <SportingEvent away="Liverpool FC" home="Arsenal FC">
+        <Attractiveness>
+            <FormHome>WWWWW</FormHome>
+            <FormAway>LWDWW</FormAway>
+            <Importance>0</Importance>
+            <Position>1</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>646.0</Budget>
+        <AreaAttractiveness>22631</AreaAttractiveness>
+        <LeagueType>Premier League</LeagueType>
+        <LeaguePoints>72.391</LeaguePoints>
+        <Distance>1382860.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.9755165943083022 -->
+    <SportingEvent away="West Ham United" home="Chelsea FC">
+        <Attractiveness>
+            <FormHome>WWWWW</FormHome>
+            <FormAway>DDWLW</FormAway>
+            <Importance>1</Importance>
+            <Position>10</Position>
+            <Derby>1</Derby>
+        </Attractiveness>
+        <Budget>646.0</Budget>
+        <AreaAttractiveness>22631</AreaAttractiveness>
+        <LeagueType>Premier League</LeagueType>
+        <LeaguePoints>72.391</LeaguePoints>
+        <Distance>1382860.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.7264969280002647 -->
+    <SportingEvent away="Crystal Palace" home="Tottenham Hotspur">
+        <Attractiveness>
+            <FormHome>WLWWW</FormHome>
+            <FormAway>LLLWL</FormAway>
+            <Importance>1</Importance>
+            <Position>12</Position>
+            <Derby>1</Derby>
+        </Attractiveness>
+        <Budget>646.0</Budget>
+        <AreaAttractiveness>11</AreaAttractiveness>
+        <LeagueType>Premier League</LeagueType>
+        <LeaguePoints>72.391</LeaguePoints>
+        <Distance>1382860.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.4651293523335015 -->
+    <SportingEvent away="Bournemouth AFC" home="West Ham United">
+        <Attractiveness>
+            <FormHome>DDWLW</FormHome>
+            <FormAway>WWDWD</FormAway>
+            <Importance>0</Importance>
+            <Position>2</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>646.0</Budget>
+        <AreaAttractiveness>11</AreaAttractiveness>
+        <LeagueType>Premier League</LeagueType>
+        <LeaguePoints>72.391</LeaguePoints>
+        <Distance>1382860.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.9755165943083022 -->
+    <SportingEvent away="Tottenham Hotspur" home="Arsenal FC">
+        <Attractiveness>
+            <FormHome>WWWWW</FormHome>
+            <FormAway>WLWWW</FormAway>
+            <Importance>1</Importance>
+            <Position>3</Position>
+            <Derby>1</Derby>
+        </Attractiveness>
+        <Budget>646.0</Budget>
+        <AreaAttractiveness>22631</AreaAttractiveness>
+        <LeagueType>Premier League</LeagueType>
+        <LeaguePoints>72.391</LeaguePoints>
+        <Distance>1382860.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.7088716042355551 -->
+    <SportingEvent away="FC Lokomotiv Moscow" home="FC Zenit St Petersburg">
+        <Attractiveness>
+            <FormHome>WLWWW</FormHome>
+            <FormAway>LDWWL</FormAway>
+            <Importance>1</Importance>
+            <Position>5</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>206.0</Budget>
+        <AreaAttractiveness>14</AreaAttractiveness>
+        <LeagueType>Premier League</LeagueType>
+        <LeaguePoints>48.732</LeaguePoints>
+        <Distance>1510027.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.9598496684183501 -->
+    <SportingEvent away="CSKA Moscow" home="FC Spartak Moscow">
+        <Attractiveness>
+            <FormHome>WWWWL</FormHome>
+            <FormAway>LWWWW</FormAway>
+            <Importance>2</Importance>
+            <Position>1</Position>
+            <Derby>1</Derby>
+        </Attractiveness>
+        <Budget>206.0</Budget>
+        <AreaAttractiveness>20</AreaAttractiveness>
+        <LeagueType>Premier League</LeagueType>
+        <LeaguePoints>48.732</LeaguePoints>
+        <Distance>1591028.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.7088716042355551 -->
+    <SportingEvent away="Arsenal Tula" home="FC Spartak Moscow">
+        <Attractiveness>
+            <FormHome>WWWWL</FormHome>
+            <FormAway>LWLDW</FormAway>
+            <Importance>1</Importance>
+            <Position>13</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>206.0</Budget>
+        <AreaAttractiveness>20</AreaAttractiveness>
+        <LeagueType>Premier League</LeagueType>
+        <LeaguePoints>48.732</LeaguePoints>
+        <Distance>1591028.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.7088716042355551 -->
+    <SportingEvent away="Alanyaspor" home="Besiktas JK">
+        <Attractiveness>
+            <FormHome>DWWWW</FormHome>
+            <FormAway>WWLLL</FormAway>
+            <Importance>1</Importance>
+            <Position>11</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>246.0</Budget>
+        <AreaAttractiveness>20</AreaAttractiveness>
+        <LeagueType>Super Lig</LeagueType>
+        <LeaguePoints>36.8</LeaguePoints>
+        <Distance>2040171.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.9755165943083022 -->
+    <SportingEvent away="Galatasaray Istanbul" home="Besiktas JK">
+        <Attractiveness>
+            <FormHome>DWWWW</FormHome>
+            <FormAway>LWWWW</FormAway>
+            <Importance>1</Importance>
+            <Position>3</Position>
+            <Derby>1</Derby>
+        </Attractiveness>
+        <Budget>246.0</Budget>
+        <AreaAttractiveness>20</AreaAttractiveness>
+        <LeagueType>Super Lig</LeagueType>
+        <LeaguePoints>36.8</LeaguePoints>
+        <Distance>2040171.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.7088716042355551 -->
+    <SportingEvent away="Kayserispor" home="Fenerbahce">
+        <Attractiveness>
+            <FormHome>DLWDW</FormHome>
+            <FormAway>WWDDL</FormAway>
+            <Importance>1</Importance>
+            <Position>12</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>246.0</Budget>
+        <AreaAttractiveness>20</AreaAttractiveness>
+        <LeagueType>Super Lig</LeagueType>
+        <LeaguePoints>36.8</LeaguePoints>
+        <Distance>2040171.0</Distance>
+    </SportingEvent>
+
+    <!-- ATRAKCYJNOSC -> 	0.3469401455587981 -->
+    <SportingEvent away="Benfica Lisbon" home="GD Chaves">
+        <Attractiveness>
+            <FormHome>DLLDL</FormHome>
+            <FormAway>DWWWD</FormAway>
+            <Importance>1</Importance>
+            <Position>10</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>293.0</Budget>
+        <AreaAttractiveness>3</AreaAttractiveness>
+        <LeagueType>Primeira Liga</LeagueType>
+        <LeaguePoints>48.999</LeaguePoints>
+        <Distance>2732898.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.8795867175867103 -->
+    <SportingEvent away="Benfica Lisbon" home="FC Porto">
+        <Attractiveness>
+            <FormHome>DWDWL</FormHome>
+            <FormAway>DWWWD</FormAway>
+            <Importance>2</Importance>
+            <Position>1</Position>
+            <Derby>1</Derby>
+        </Attractiveness>
+        <Budget>293.0</Budget>
+        <AreaAttractiveness>7</AreaAttractiveness>
+        <LeagueType>Primeira Liga</LeagueType>
+        <LeaguePoints>48.999</LeaguePoints>
+        <Distance>2878643.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.8795867175867103 -->
+    <SportingEvent away="Benfica Lisbon" home="Sporting CP">
+        <Attractiveness>
+            <FormHome>DWLLW</FormHome>
+            <FormAway>DWWWD</FormAway>
+            <Importance>2</Importance>
+            <Position>2</Position>
+            <Derby>1</Derby>
+        </Attractiveness>
+        <Budget>293.0</Budget>
+        <AreaAttractiveness>18</AreaAttractiveness>
+        <LeagueType>Primeira Liga</LeagueType>
+        <LeaguePoints>48.999</LeaguePoints>
+        <Distance>3029776.0</Distance>
+    </SportingEvent>
+
+    <!-- LIGA EUROPY -->
+
+    <!-- ATRAKCYJNOSC -> 	0.5936522523275157 -->
+    <SportingEvent away="Villarreal CF" home="AS Roma">
+        <Attractiveness>
+            <FormHome>WDWWD</FormHome>
+            <FormAway>DDLDW</FormAway>
+            <Importance>2</Importance>
+            <Position>0</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>434.8</Budget>
+        <AreaAttractiveness>0</AreaAttractiveness>
+        <LeagueType>Europe League</LeagueType>
+        <LeaguePoints>100.9692</LeaguePoints>
+        <Distance>1636512.0</Distance>
+    </SportingEvent>
+
+    <!-- ATRAKCYJNOSC -> 	0.7088716042355551 -->
+    <SportingEvent away="Sporting Braga" home="FC Shakhtar Donetsk">
+        <Attractiveness>
+            <FormHome>WWWWW</FormHome>
+            <FormAway>LDWDL</FormAway>
+            <Importance>1</Importance>
+            <Position>0</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>172.0</Budget>
+        <AreaAttractiveness>0</AreaAttractiveness>
+        <LeagueType>Europe League</LeagueType>
+        <LeaguePoints>54.7392</LeaguePoints>
+        <Distance>1608762.0</Distance>
+    </SportingEvent>
+
+    <!-- ATRAKCYJNOSC -> 	0.7399895557839058 -->
+    <SportingEvent away="Partizan Belgrade" home="KGHM Zaglebie Lubin">
+        <Attractiveness>
+            <FormHome>WWWWL</FormHome>
+            <FormAway>WWWWW</FormAway>
+            <Importance>0</Importance>
+            <Position>0</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>336.0</Budget>
+        <AreaAttractiveness>0</AreaAttractiveness>
+        <LeagueType>Europe League</LeagueType>
+        <LeaguePoints>25.2012</LeaguePoints>
+        <Distance>72667.0</Distance>
+    </SportingEvent>
+
+    <!-- ATRAKCYJNOSC -> 	0.5936522523275157 -->
+    <SportingEvent away="Manchester United" home="Celta de Vigo">
+        <Attractiveness>
+            <FormHome>WDLDW</FormHome>
+            <FormAway>WWLWW</FormAway>
+            <Importance>2</Importance>
+            <Position>0</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>457.79999999999995</Budget>
+        <AreaAttractiveness>0</AreaAttractiveness>
+        <LeagueType>Europe League</LeagueType>
+        <LeaguePoints>102.405</LeaguePoints>
+        <Distance>2872645.0</Distance>
+    </SportingEvent>
+
+
+    <!-- ATRAKCYJNOSC -> 	0.7088716042355551 -->
+    <SportingEvent away="FC Schalke 04" home="OGC Nice">
+        <Attractiveness>
+            <FormHome>LWLLW</FormHome>
+            <FormAway>WWWWL</FormAway>
+            <Importance>1</Importance>
+            <Position>0</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>446.0</Budget>
+        <AreaAttractiveness>19</AreaAttractiveness>
+        <LeagueType>Europe League</LeagueType>
+        <LeaguePoints>77.6982</LeaguePoints>
+        <Distance>1479569.0</Distance>
+    </SportingEvent>
+    <!-- LIGA MISTRZOW -->
+
+    <!-- ATRAKCYJNOSC -> 	0.24170726943086432 -->
+    <SportingEvent away="Borussia Dortmund" home="Legia Warsaw">
+        <Attractiveness>
+            <FormHome>LLDLW</FormHome>
+            <FormAway>DWWWD</FormAway>
+            <Importance>2</Importance>
+            <Position>0</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>349.5</Budget>
+        <AreaAttractiveness>14</AreaAttractiveness>
+        <LeagueType>Champions League</LeagueType>
+        <LeaguePoints>73.12425</LeaguePoints>
+        <Distance>347324.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.7088716042355551 -->
+    <SportingEvent away="Fotbal Club FCSB" home="Sparta Prague">
+        <Attractiveness>
+            <FormHome>WWDWD</FormHome>
+            <FormAway>DDLWW</FormAway>
+            <Importance>1</Importance>
+            <Position>0</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>349.5</Budget>
+        <AreaAttractiveness>20</AreaAttractiveness>
+        <LeagueType>Champions League</LeagueType>
+        <LeaguePoints>31.5015</LeaguePoints>
+        <Distance>328915.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.5936522523275157 -->
+    <SportingEvent away="FC Barcelona" home="Manchester City">
+        <Attractiveness>
+            <FormHome>DLWDD</FormHome>
+            <FormAway>WWLWW</FormAway>
+            <Importance>2</Importance>
+            <Position>0</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>769.5</Budget>
+        <AreaAttractiveness>20</AreaAttractiveness>
+        <LeagueType>Champions League</LeagueType>
+        <LeaguePoints>128.00625000000002</LeaguePoints>
+        <Distance>1726569.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.5936522523275157 -->
+    <SportingEvent away="Real Madrid" home="Borussia Dortmund">
+        <Attractiveness>
+            <FormHome>DWWWD</FormHome>
+            <FormAway>DWDWD</FormAway>
+            <Importance>2</Importance>
+            <Position>0</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>355.5</Budget>
+        <AreaAttractiveness>19</AreaAttractiveness>
+        <LeagueType>Champions League</LeagueType>
+        <LeaguePoints>131.0865</LeaguePoints>
+        <Distance>774411.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.8270278920465777 -->
+    <SportingEvent away="Arsenal FC" home="Bayern Munich">
+        <Attractiveness>
+            <FormHome>LWWLW</FormHome>
+            <FormAway>WWWDW</FormAway>
+            <Importance>2</Importance>
+            <Position>0</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>355.5</Budget>
+        <AreaAttractiveness>0</AreaAttractiveness>
+        <LeagueType>Champions League</LeagueType>
+        <LeaguePoints>111.66675000000001</LeaguePoints>
+        <Distance>719896.0</Distance>
+    </SportingEvent>
+</Sport>

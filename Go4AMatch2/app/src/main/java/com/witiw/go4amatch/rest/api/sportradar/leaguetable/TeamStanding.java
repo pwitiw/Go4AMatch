@@ -12,10 +12,10 @@ import org.simpleframework.xml.Root;
 @Root(name = "team_standing", strict = false)
 public class TeamStanding {
 
-    @Attribute
+    @Attribute(required = false)
     private int rank;
 
-    @Element
+    @Element(required = false)
     private Team team;
 
     public int getRank() {

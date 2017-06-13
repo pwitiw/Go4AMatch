@@ -1,5 +1,7 @@
 package com.witiw.go4amatch.logic;
 
+import android.util.Pair;
+
 import com.witiw.go4amatch.IMainPresenter;
 import com.witiw.go4amatch.entities.FormType;
 import com.witiw.go4amatch.entities.LeagueType;
@@ -9,7 +11,7 @@ import com.witiw.go4amatch.logic.services.DerbyService;
 import com.witiw.go4amatch.logic.services.FactoryClass;
 import com.witiw.go4amatch.logic.services.FormService;
 import com.witiw.go4amatch.logic.services.ImportanceService;
-import com.witiw.go4amatch.logic.services.PositionService;
+import com.witiw.go4amatch.logic.services.LeaguePointsService;
 import com.witiw.go4amatch.logic.services.TeamsService;
 import com.witiw.go4amatch.rest.api.sportradar.gameschedule.SportEvent;
 import com.witiw.go4amatch.rest.api.sportradar.gameschedule.TournamentSchedule;
@@ -22,21 +24,23 @@ import org.w3c.dom.Document;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Patryk on 03.06.2017.
  */
 
 public class DataProcessingService {
-
+    private static Map<String, Pair<TournamentSchedule, TournamentStandings>> tournamentMap = new HashMap<>();
     private IMainPresenter mainPresenter;
     //SERVICES
     private ImportanceService importanceService;
     private FormService formService;
     private TeamsService teamsService;
-    private PositionService positionService;
     private DerbyService derbyService;
+    private LeaguePointsService leaguePointsService;
     private FactoryClass factory;
 
     public DataProcessingService(IMainPresenter mainPresenter) {
@@ -55,23 +59,28 @@ public class DataProcessingService {
     }
 
     public List<SportingEvent> getSportingEventsForLeague(LeagueType leagueType) throws Exception {
+        if (!isLocationSet())
+            throw new IllegalArgumentException();
         factory.setStartingPosition(mainPresenter.getLocation());
         List<SportingEvent> sportingEvents = new ArrayList<>();
-        TournamentSchedule tournamentSchedule = SportRadarRestService.getLeagueSchedule(leagueType.getSportRadarId());
-        TournamentStandings tournamentTable = SportRadarRestService.getTableLeague(leagueType.getSportRadarId());
+        cacheTournamentMap(leagueType);
 
-        //// FIXME: 06.06.2017  tutaj taki hack zastosujemy, ze bedzie miala tablica tylko z 3 elem, zeby nie zabralo duzo requestow
-        for (SportEvent event : tournamentSchedule.getSportEvents().subList(152, 156)) {
-            FactoryClass.Data data = factory.getData(event, tournamentTable, leagueType);
+        // FIXME: 06.06.2017  tutaj taki hack zastosujemy, ze bedzie miala tablica tylko z 3 elem, zeby nie zabralo duzo requestow
+//        for (SportEvent event : tournamentMap.get(leagueType.getSportRadarId()).first.getSportEvents().subList(178, 181)) {
+        for (SportEvent event : tournamentMap.get(leagueType.getSportRadarId()).first.getSportEvents()) {
+            FactoryClass.Data data = factory.getData(event, tournamentMap.get(leagueType.getSportRadarId()).second, leagueType);
             SportingEvent sportingEvent = createSportingEvent(data);
             sportingEvents.add(sportingEvent);
         }
+
         return sportingEvents;
     }
 
     private SportingEvent createSportingEvent(FactoryClass.Data data) throws IOException {
 
         Teams teams = teamsService.getTeams(data);
+
+        double leaguePoints = leaguePointsService.getLeaguePoints(data);
         //Attractiveness
         int importance = importanceService.getImportance(data);
         int derby = derbyService.getDerby(data);
@@ -86,6 +95,7 @@ public class DataProcessingService {
                 .withImportance(importance)
                 .withPosition(data.getPosition())
                 .withForm(formType)
+                .withLeaguePoints(leaguePoints)
                 .withLeagueType(data.getLeagueType())
                 .build();
     }
@@ -102,8 +112,20 @@ public class DataProcessingService {
         importanceService = new ImportanceService();
         formService = new FormService();
         teamsService = new TeamsService();
-        positionService = new PositionService();
         derbyService = new DerbyService();
+        leaguePointsService = new LeaguePointsService();
     }
 
+    private boolean isLocationSet() {
+        return !mainPresenter.getLocation().equals("");
+    }
+
+    private void cacheTournamentMap(LeagueType leagueType) throws Exception {
+        String sportRadarId = leagueType.getSportRadarId();
+        if (!tournamentMap.containsKey(sportRadarId)) {
+            TournamentSchedule tournamentSchedule = SportRadarRestService.getLeagueSchedule(sportRadarId);
+            TournamentStandings tournamentTable = SportRadarRestService.getTableLeague(sportRadarId);
+            tournamentMap.put(sportRadarId, new Pair(tournamentSchedule, tournamentTable));
+        }
+    }
 }

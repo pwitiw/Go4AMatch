@@ -23,11 +23,6 @@ public class MainActivity extends AppCompatActivity implements IMainActivity {
     }
 
     @Override
-    public void showToast(String text) {
-      Toast.makeText(this,text,Toast.LENGTH_SHORT);
-    }
-
-    @Override
     public Context getContext() {
         return this;
     }

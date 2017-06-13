@@ -11,10 +11,10 @@ import java.util.List;
 @Root(name = "standings", strict = false)
 public class Standings {
 
-    @ElementList(type = TeamStanding.class)
-    private List<TeamStanding> group;
+    @ElementList(inline = true)
+    private List<Group> group;
 
-    public List<TeamStanding> getGroup() {
+    public List<Group> getGroup() {
         return group;
     }
 }

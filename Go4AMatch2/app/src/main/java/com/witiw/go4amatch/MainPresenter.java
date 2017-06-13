@@ -5,6 +5,7 @@ import android.content.Context;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
+import android.widget.Toast;
 
 import com.witiw.go4amatch.entities.Criterion;
 import com.witiw.go4amatch.entities.SportingEvent;
@@ -20,7 +21,6 @@ public class MainPresenter implements IMainPresenter {
     PreferenceFragment preferenceFragment;
     ResultFragment resultFragment;
     IMainActivity mainActivity;
-    AlgorithmEnginee algorithmEnginee;
     TabLayout tabLayout;
     ViewPagerAdapter adapter;
 
@@ -39,7 +39,6 @@ public class MainPresenter implements IMainPresenter {
         resultFragment = new ResultFragment(this);
         adapter.addFragment(preferenceFragment, "Preferences");
         adapter.addFragment(resultFragment, "List");
-//        adapter.addFragment(new ResultFragment(this), "Map");
         viewPager.setAdapter(adapter);
         setupTabIcons(activity, tabLayout);
     }
@@ -53,15 +52,10 @@ public class MainPresenter implements IMainPresenter {
                 .withText(R.string.list_mode)
                 .withDrawable(R.drawable.ic_list)
                 .buildForLayout(tabLayout);
-//        new TabBuilder(activity)
-//                .withText(R.string.map_mode)
-//                .withDrawable(R.drawable.ic_map)
-//                .buildForLayout(tabLayout);
     }
 
     @Override
     public void performSearching(List<Criterion> criterias) {
-//        showProgress(preferenceFragment.getContext());
         new AlgorithmEnginee(this).execute(criterias.toArray(new Criterion[criterias.size()]));
     }
 
@@ -69,7 +63,6 @@ public class MainPresenter implements IMainPresenter {
     public void showResults(List<SportingEvent> events) {
         resultFragment.updateData(events);
         tabLayout.getTabAt(1).select();
-        hideProgress();
     }
 
     @Override
@@ -87,10 +80,16 @@ public class MainPresenter implements IMainPresenter {
         preferenceFragment.cancelProgressDialog();
     }
 
-
     @Override
     public String getLocation() {
         return preferenceFragment.getLocationText();
+    }
+
+    @Override
+    public void showToast(String text) {
+        Toast toast = Toast.makeText(getContext(), text, Toast.LENGTH_LONG);
+        toast.setGravity(toast.getGravity(),toast.getXOffset(),100);
+        toast.show();
     }
 
 }

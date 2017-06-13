@@ -34,24 +34,24 @@ public enum CountryBudget {
         this.countryCode = countryCode;
     }
 
-    public static double getBudget(String countryCode) {
+    public static double getBudget(String countryCode, LeagueType leagueType) {
         for (CountryBudget countryBudget : CountryBudget.values()) {
             if (countryBudget.countryCode.equals(countryCode)) {
 
-                return getBudgetSum(countryBudget);
+                return getBudgetSum(countryBudget, leagueType);
             }
         }
-        return getBudgetSum(OTHER);
+        return getBudgetSum(OTHER, leagueType);
     }
 
-    private static double getBudgetSum(CountryBudget countryBudget) {
-        return countryBudget.accomodation + countryBudget.food + getTicketBudget(countryBudget);
+    private static double getBudgetSum(CountryBudget countryBudget, LeagueType leagueType) {
+        return countryBudget.accomodation + countryBudget.food + getTicketBudget(countryBudget, leagueType);
     }
 
-    private static double getTicketBudget(CountryBudget countryBudget) {
-        if (countryBudget == CHAMPIONS_LEAGUE)
+    private static double getTicketBudget(CountryBudget countryBudget, LeagueType leagueType) {
+        if (leagueType == LeagueType.CHAMPIONS_LEAGUE)
             return CHAMPIONS_LEAGUE.tickets * countryBudget.tickets;
-        else if (countryBudget == EUROPE)
+        else if (leagueType == LeagueType.EUROPE)
             return EUROPE.tickets * countryBudget.tickets;
         else
             return countryBudget.tickets;

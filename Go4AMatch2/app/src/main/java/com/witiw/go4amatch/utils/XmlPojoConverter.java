@@ -27,7 +27,8 @@ public class XmlPojoConverter {
     private static final String POSITION = "Position";
     private static final String DERBY = "Derby";
     private static final String BUDGET = "Budget";
-    private static final String LIGUE_TYPE = "LeagueType";
+    private static final String LEAGUE_POINTS = "LeaguePoints";
+    private static final String LEAGUE_TYPE = "LeagueType";
     private static final String DISTANCE = "Distance";
     private static final String FORM_HOME = "FormHome";
     private static final String FORM_AWAY = "FormAway";
@@ -51,8 +52,9 @@ public class XmlPojoConverter {
             event.getTeams().setFormAway(attractiveness.getElementsByTagName(FORM_AWAY).item(0).getTextContent());
             /* OTHER */
             event.setAreaAttractiveness(Integer.parseInt(element.getElementsByTagName(AREA_ATTRACTIVENESS).item(0).getTextContent()));
-            event.setBudget(Integer.parseInt(element.getElementsByTagName(BUDGET).item(0).getTextContent()));
-            event.setLeagueType(LeagueType.getTypeForName(element.getElementsByTagName(LIGUE_TYPE).item(0).getTextContent()));
+            event.setBudget(Double.parseDouble(element.getElementsByTagName(BUDGET).item(0).getTextContent()));
+            event.setLeaguePoints(Double.parseDouble(element.getElementsByTagName(LEAGUE_POINTS).item(0).getTextContent()));
+            event.setLeagueType(LeagueType.getTypeForName(element.getElementsByTagName(LEAGUE_TYPE).item(0).getTextContent()));
             event.setDistance(Double.parseDouble(element.getElementsByTagName(DISTANCE).item(0).getTextContent()));
             events.add(event);
         }

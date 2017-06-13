@@ -2,28 +2,24 @@ package com.witiw.go4amatch;
 
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.text.InputType;
 import android.text.SpannableString;
-import android.text.style.ForegroundColorSpan;
 import android.text.style.RelativeSizeSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Spinner;
-import android.widget.TextView;
 
 import com.witiw.go4amatch.entities.Criterion;
 import com.witiw.go4amatch.entities.Importance;
-import com.witiw.go4amatch.entities.criterions.AttractivenessCriterion;
-import com.witiw.go4amatch.entities.criterions.BudgetCriterion;
-import com.witiw.go4amatch.entities.criterions.DistanceCriterion;
-import com.witiw.go4amatch.entities.criterions.LigueTypeCriterion;
+import com.witiw.go4amatch.entities.criteria.AreaAttractivenessCriterion;
+import com.witiw.go4amatch.entities.criteria.AttractivenessCriterion;
+import com.witiw.go4amatch.entities.criteria.BudgetCriterion;
+import com.witiw.go4amatch.entities.criteria.DistanceCriterion;
+import com.witiw.go4amatch.entities.criteria.LigueTypeCriterion;
 
 import org.adw.library.widgets.discreteseekbar.DiscreteSeekBar;
 
@@ -57,8 +53,10 @@ public class PreferenceFragment extends Fragment {
         searchButton = (Button) view.findViewById(R.id.btSearch);
         textView = (AutoCompleteTextView) view.findViewById(R.id.tvLocation);
         searchButton.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
+                hideSoftKeyboard();
                 List<Criterion> criterias = getCrieria();
                 presenter.performSearching(criterias);
             }
@@ -91,7 +89,7 @@ public class PreferenceFragment extends Fragment {
         if (ligueType.getProgress() > 0)
             criteria.add(new LigueTypeCriterion(Importance.valueOf(ligueType.getProgress())));
         if (areaAttractiveness.getProgress() > 0)
-            criteria.add(new AttractivenessCriterion(Importance.valueOf(areaAttractiveness.getProgress())));
+            criteria.add(new AreaAttractivenessCriterion(Importance.valueOf(areaAttractiveness.getProgress())));
         if (attractiveness.getProgress() > 0)
             criteria.add(new AttractivenessCriterion(Importance.valueOf(attractiveness.getProgress())));
         return criteria;
@@ -140,5 +138,13 @@ public class PreferenceFragment extends Fragment {
 
     public String getLocationText() {
         return textView.getText().toString();
+    }
+
+
+    private void hideSoftKeyboard() {
+        InputMethodManager inputManager = (InputMethodManager)
+                getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+        inputManager.hideSoftInputFromWindow(getActivity().getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+
     }
 }

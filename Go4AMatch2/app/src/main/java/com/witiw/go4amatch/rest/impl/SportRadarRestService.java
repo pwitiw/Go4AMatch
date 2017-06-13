@@ -61,7 +61,7 @@ public class SportRadarRestService {
     public static TournamentStandings getTableLeague(String leagueId) throws Exception {
         SPORT_RADAR_REST_SERVICE_COUNTER++;
         Response<TournamentStandings> response = sportRadarAPI.getTableLeague(leagueId).execute();
-        Thread.sleep(1000);
+        Thread.sleep(500);
         return response.body();
     }
 }

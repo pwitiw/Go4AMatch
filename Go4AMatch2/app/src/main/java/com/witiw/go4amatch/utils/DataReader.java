@@ -29,7 +29,7 @@ import weka.core.Instances;
 public class DataReader {
 
     private static Context APP_CONTEXT;
-    private static final String TEST_DATA_FILE_NAME = "sporting_events.xml";
+    private static final String TEST_DATA_FILE_NAME = "test_data.xml";
     private static final String TRAINING_DATA_FILE_NAME = "training_data_bayes.arff";
 
     public static Document readTestData() {

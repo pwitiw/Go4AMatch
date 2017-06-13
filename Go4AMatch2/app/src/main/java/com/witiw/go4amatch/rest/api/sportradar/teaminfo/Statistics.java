@@ -15,10 +15,18 @@ public class Statistics {
     private List<Season> seasons;
 
     public String getFormForSeason(String seasonId) {
+        String form = null;
+        for (int i = seasons.size() - 1; i > 0; i--) {
+            if (seasons.get(i).getForm() != null) {
+                form = seasons.get(i).getForm();
+                break;
+            }
+        }
+
         for (int i = seasons.size() - 1; i > 0; i--) {
             if (seasons.get(i).getId().equals(seasonId))
                 return seasons.get(i).getForm();
         }
-        throw new NullPointerException();
+        return form;
     }
 }

@@ -1,4 +1,4 @@
-package com.witiw.go4amatch.entities.criterions;
+package com.witiw.go4amatch.entities.criteria;
 
 
 import com.witiw.go4amatch.entities.SportingEvent;
@@ -10,8 +10,8 @@ import com.witiw.go4amatch.entities.Criterion;
  */
 public class AreaAttractivenessCriterion extends Criterion {
 
-    public AreaAttractivenessCriterion(String name, Importance importance) {
-        super(name, importance);
+    public AreaAttractivenessCriterion(Importance importance) {
+        super("Atrakcyjność okolic", importance);
     }
 
     public AreaAttractivenessCriterion(double factor) {

@@ -11,7 +11,7 @@ import java.util.List;
 @Root(name="PlaceSearchResponse",strict = false)
 public class PlaceSearchResponse {
 
-    @ElementList(inline = true, entry = "result",  type = Result.class)
+    @ElementList(inline = true, entry = "result",  type = Result.class,required = false)
     private List<Result> results;
 
     public List<Result> getResults() {

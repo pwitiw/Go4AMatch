@@ -23,7 +23,6 @@ public class FormService {
 
     private FormType getFormTypeForFactors(int f1, int f2) {
         int f = f1 + f2;
-        System.out.println(f);
         if (f >= TRESHOLD_GOOD)
             return FormType.GOOD;
         else if (f >= TRESHOLD_MEDIUM)

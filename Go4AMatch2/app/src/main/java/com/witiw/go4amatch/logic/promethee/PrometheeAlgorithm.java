@@ -20,7 +20,7 @@ public class PrometheeAlgorithm {
 
         double[][] preferenceMatrix = pairwaiseComparationAlternatives(criterias, events);
         calculateFlow(events, preferenceMatrix);
-        sortResults(events);
+        Collections.sort(events, SportingEvent.Comparator);
     }
 
     private double[][] pairwaiseComparationAlternatives(List<Criterion> criterias, List<SportingEvent> events) {

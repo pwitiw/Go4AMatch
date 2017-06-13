@@ -8,10 +8,6 @@ import android.content.Context;
 
 public interface IMainActivity {
 
-
-
-    void showToast(String text);
-
     Context getContext();
 }
 

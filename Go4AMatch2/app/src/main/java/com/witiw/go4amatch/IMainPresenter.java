@@ -25,4 +25,5 @@ public interface IMainPresenter {
 
     String getLocation();
 
+    void showToast(String text);
 }

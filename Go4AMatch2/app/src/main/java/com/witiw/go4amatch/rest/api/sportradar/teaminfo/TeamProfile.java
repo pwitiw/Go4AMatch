@@ -55,4 +55,8 @@ public class TeamProfile {
     public String getCountryCode() {
         return team.getCountryCode();
     }
+
+    public String getCountryName() {
+        return venue.getCountryName();
+    }
 }

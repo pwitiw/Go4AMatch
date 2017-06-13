@@ -17,7 +17,7 @@ public enum LeagueType {
     UKRAINE(42.233, "Premier League", "sr:tournament:218"),
     BELGIUM(38.400, "Pro League", "sr:tournament:38"),
     TURKEY(36.800, "Super Lig", "sr:tournament:52"),
-    OTHER(21.001, "-", "");
+    OTHER(21.001, "-", "other");
 
     private double uefaCoefficient;
     private String leagueName;
@@ -47,14 +47,14 @@ public enum LeagueType {
                 return type;
         }
         return LeagueType.OTHER;
-//        throw new IllegalArgumentException("League Type for given code: " + leagueName + "does not exists");
     }
 
-    public static LeagueType getLeagueForSportRadarId(String leagueId) {
+    public static double getCoefficientForSportRadarId(String sportRadarId) {
         for (LeagueType type : values()) {
-            if (type.sportRadarId.toLowerCase().equals(leagueId))
-                return type;
+            if (type.sportRadarId.toLowerCase().equals(sportRadarId))
+                return type.getUefaCoefficient();
         }
-        return LeagueType.OTHER;
+        return OTHER.getUefaCoefficient();
     }
+
 }

@@ -8,14 +8,14 @@ import com.witiw.go4amatch.entities.LeagueType;
  */
 
 public class ImportanceService {
-    //todo test
+
     public int getImportance(FactoryClass.Data data) {
 
-        if (isChampionsLeagueAndGroup(data) || areTeamsInTop3(data) || isCup(data))
+        if (isChampionsLeagueAndGroup(data) || areTeamsInTop3InRegularLeague(data) || isCup(data))
             return 2;
         else if (isChampionsLeagueAndQualification(data)
                 || isEuropeLeagueAndGroup(data)
-                || (isTeamInTop3(data.getHomeRank()) || isTeamInTop3(data.getAwayRank())))
+                || (((isTeamInTop3(data.getHomeRank()) || isTeamInTop3(data.getAwayRank()))) && !isEuropeLeagueOrChampionsLeague(data)))
             return 1;
         else
             return 0;
@@ -35,8 +35,8 @@ public class ImportanceService {
 
     }
 
-    private boolean areTeamsInTop3(FactoryClass.Data data) {
-        return isTeamInTop3(data.getHomeRank()) && isTeamInTop3(data.getAwayRank());
+    private boolean areTeamsInTop3InRegularLeague(FactoryClass.Data data) {
+        return isTeamInTop3(data.getHomeRank()) && isTeamInTop3(data.getAwayRank()) && !isEuropeLeagueOrChampionsLeague(data);
     }
 
     private boolean isTeamInTop3(int rank) {
@@ -45,6 +45,10 @@ public class ImportanceService {
 
     private boolean isChampionsLeagueAndQualification(FactoryClass.Data data) {
         return GameType.qualification == data.getGameType() && LeagueType.CHAMPIONS_LEAGUE == data.getLeagueType();
+    }
+
+    private boolean isEuropeLeagueOrChampionsLeague(FactoryClass.Data data) {
+        return data.getLeagueType() == LeagueType.CHAMPIONS_LEAGUE || data.getLeagueType() == LeagueType.EUROPE;
     }
 
 }

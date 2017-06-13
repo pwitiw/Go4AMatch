@@ -8,12 +8,12 @@ import org.simpleframework.xml.Root;
  */
 @Root(strict = false)
 public class Elem {
-    @Element
+    @Element(required = false)
     private Distance distance;
 
     public int getDistance() {
         if (distance == null)
-            return 999999;
+            return 99999999;
         return distance.getValue();
     }
 }

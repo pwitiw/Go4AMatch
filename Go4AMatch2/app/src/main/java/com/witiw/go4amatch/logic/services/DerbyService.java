@@ -5,7 +5,6 @@ import com.witiw.go4amatch.entities.DerbyList;
 /**
  * Created by Patryk on 05.06.2017.
  */
-// todo test
 public class DerbyService {
 
     public int getDerby(FactoryClass.Data data) {
