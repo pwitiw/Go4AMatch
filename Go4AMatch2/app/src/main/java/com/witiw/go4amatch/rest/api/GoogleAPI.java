@@ -15,9 +15,11 @@ import retrofit.http.Query;
 
 public interface GoogleAPI {
 
-    @GET(AppProperties.BASE_GOOGLE_URL + "place/textsearch/" + AppProperties.XML_DOC_TYPE + "?")
+    @GET(AppProperties.BASE_GOOGLE_URL + "place/textsearch/" + AppProperties.XML_DOC_TYPE + "?hasNextPage=true&nextPage()=true")
     Call<PlaceSearchResponse> getAttractionsForCity(@Query("query") String cityQuery, @Query("key") String key);
 
+    @GET(AppProperties.BASE_GOOGLE_URL + "place/textsearch/" + AppProperties.XML_DOC_TYPE + "?hasNextPage=true&nextPage()=true")
+    Call<PlaceSearchResponse> getNextPageAttractionfsForCity(@Query("query") String cityQuery, @Query("key") String key, @Query("pagetoken") String pagetoken);
 
     //    @GET(AppProperties.BASE_GOOGLE_URL + "distancematrix/" + AppProperties.XML_DOC_TYPE + "?units=metric&origins=startCity&destinations=endCity&key=" + AppProperties.GOOGLE_DISTANCE_API_KEY)
     @GET(AppProperties.BASE_GOOGLE_URL + "distancematrix/" + AppProperties.XML_DOC_TYPE + "?units=metric")

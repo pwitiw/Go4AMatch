@@ -10,7 +10,7 @@
             <Derby>1</Derby>
         </Attractiveness>
         <Budget>401.0</Budget>
-        <AreaAttractiveness>20</AreaAttractiveness>
+        <AreaAttractiveness>24</AreaAttractiveness>
         <LeagueType>Pro League</LeagueType>
         <LeaguePoints>38.4</LeaguePoints>
         <Distance>1051367.0</Distance>
@@ -25,7 +25,7 @@
             <Derby>1</Derby>
         </Attractiveness>
         <Budget>401.0</Budget>
-        <AreaAttractiveness>20</AreaAttractiveness>
+        <AreaAttractiveness>24</AreaAttractiveness>
         <LeagueType>Pro League</LeagueType>
         <LeaguePoints>38.4</LeaguePoints>
         <Distance>1051367.0</Distance>
@@ -40,7 +40,7 @@
             <Derby>0</Derby>
         </Attractiveness>
         <Budget>401.0</Budget>
-        <AreaAttractiveness>20</AreaAttractiveness>
+        <AreaAttractiveness>11</AreaAttractiveness>
         <LeagueType>Pro League</LeagueType>
         <LeaguePoints>38.4</LeaguePoints>
         <Distance>962288.0</Distance>
@@ -56,7 +56,7 @@
             <Derby>0</Derby>
         </Attractiveness>
         <Budget>171.0</Budget>
-        <AreaAttractiveness>20</AreaAttractiveness>
+        <AreaAttractiveness>60</AreaAttractiveness>
         <LeagueType>Premier League</LeagueType>
         <LeaguePoints>42.233</LeaguePoints>
         <Distance>595838.0</Distance>
@@ -71,7 +71,7 @@
             <Derby>1</Derby>
         </Attractiveness>
         <Budget>171.0</Budget>
-        <AreaAttractiveness>20</AreaAttractiveness>
+        <AreaAttractiveness>25</AreaAttractiveness>
         <LeagueType>Premier League</LeagueType>
         <LeaguePoints>42.233</LeaguePoints>
         <Distance>1608762.0</Distance>
@@ -86,7 +86,7 @@
             <Derby>0</Derby>
         </Attractiveness>
         <Budget>171.0</Budget>
-        <AreaAttractiveness>20</AreaAttractiveness>
+        <AreaAttractiveness>25</AreaAttractiveness>
         <LeagueType>Premier League</LeagueType>
         <LeaguePoints>42.233</LeaguePoints>
         <Distance>1608762.0</Distance>
@@ -101,7 +101,7 @@
             <Derby>1</Derby>
         </Attractiveness>
         <Budget>326.0</Budget>
-        <AreaAttractiveness>20</AreaAttractiveness>
+        <AreaAttractiveness>26</AreaAttractiveness>
         <LeagueType>Bundesliga</LeagueType>
         <LeaguePoints>76.498</LeaguePoints>
         <Distance>719896.0</Distance>
@@ -116,7 +116,7 @@
             <Derby>1</Derby>
         </Attractiveness>
         <Budget>326.0</Budget>
-        <AreaAttractiveness>20</AreaAttractiveness>
+        <AreaAttractiveness>25</AreaAttractiveness>
         <LeagueType>Bundesliga</LeagueType>
         <LeaguePoints>76.498</LeaguePoints>
         <Distance>774411.0</Distance>
@@ -131,7 +131,7 @@
             <Derby>0</Derby>
         </Attractiveness>
         <Budget>326.0</Budget>
-        <AreaAttractiveness>12</AreaAttractiveness>
+        <AreaAttractiveness>16</AreaAttractiveness>
         <LeagueType>Bundesliga</LeagueType>
         <LeaguePoints>76.498</LeaguePoints>
         <Distance>344045.0</Distance>
@@ -146,7 +146,7 @@
             <Derby>0</Derby>
         </Attractiveness>
         <Budget>326.0</Budget>
-        <AreaAttractiveness>20</AreaAttractiveness>
+        <AreaAttractiveness>26</AreaAttractiveness>
         <LeagueType>Bundesliga</LeagueType>
         <LeaguePoints>76.498</LeaguePoints>
         <Distance>719896.0</Distance>
@@ -161,7 +161,7 @@
             <Derby>0</Derby>
         </Attractiveness>
         <Budget>417.0</Budget>
-        <AreaAttractiveness>20</AreaAttractiveness>
+        <AreaAttractiveness>17</AreaAttractiveness>
         <LeagueType>Serie A</LeagueType>
         <LeaguePoints>69.998</LeaguePoints>
         <Distance>1014801.0</Distance>
@@ -176,7 +176,7 @@
             <Derby>0</Derby>
         </Attractiveness>
         <Budget>417.0</Budget>
-        <AreaAttractiveness>17</AreaAttractiveness>
+        <AreaAttractiveness>24</AreaAttractiveness>
         <LeagueType>Serie A</LeagueType>
         <LeaguePoints>69.998</LeaguePoints>
         <Distance>1170872.0</Distance>
@@ -191,7 +191,7 @@
             <Derby>1</Derby>
         </Attractiveness>
         <Budget>417.0</Budget>
-        <AreaAttractiveness>16</AreaAttractiveness>
+        <AreaAttractiveness>25</AreaAttractiveness>
         <LeagueType>Serie A</LeagueType>
         <LeaguePoints>69.998</LeaguePoints>
         <Distance>1636512.0</Distance>
@@ -206,7 +206,7 @@
             <Derby>1</Derby>
         </Attractiveness>
         <Budget>417.0</Budget>
-        <AreaAttractiveness>16</AreaAttractiveness>
+        <AreaAttractiveness>25</AreaAttractiveness>
         <LeagueType>Serie A</LeagueType>
         <LeaguePoints>69.998</LeaguePoints>
         <Distance>1636512.0</Distance>
@@ -221,7 +221,7 @@
             <Derby>0</Derby>
         </Attractiveness>
         <Budget>417.0</Budget>
-        <AreaAttractiveness>14</AreaAttractiveness>
+        <AreaAttractiveness>35</AreaAttractiveness>
         <LeagueType>Serie A</LeagueType>
         <LeaguePoints>69.998</LeaguePoints>
         <Distance>1835971.0</Distance>
@@ -236,7 +236,7 @@
             <Derby>1</Derby>
         </Attractiveness>
         <Budget>431.0</Budget>
-        <AreaAttractiveness>20</AreaAttractiveness>
+        <AreaAttractiveness>18</AreaAttractiveness>
         <LeagueType>Ligue 1</LeagueType>
         <LeaguePoints>52.999</LeaguePoints>
         <Distance>1285009.0</Distance>
@@ -251,7 +251,7 @@
             <Derby>0</Derby>
         </Attractiveness>
         <Budget>431.0</Budget>
-        <AreaAttractiveness>10</AreaAttractiveness>
+        <AreaAttractiveness>15</AreaAttractiveness>
         <LeagueType>Ligue 1</LeagueType>
         <LeaguePoints>52.999</LeaguePoints>
         <Distance>959922.0</Distance>
@@ -266,7 +266,7 @@
             <Derby>0</Derby>
         </Attractiveness>
         <Budget>431.0</Budget>
-        <AreaAttractiveness>6</AreaAttractiveness>
+        <AreaAttractiveness>7</AreaAttractiveness>
         <LeagueType>Ligue 1</LeagueType>
         <LeaguePoints>52.999</LeaguePoints>
         <Distance>1162607.0</Distance>
@@ -281,7 +281,7 @@
             <Derby>0</Derby>
         </Attractiveness>
         <Budget>431.0</Budget>
-        <AreaAttractiveness>7</AreaAttractiveness>
+        <AreaAttractiveness>11</AreaAttractiveness>
         <LeagueType>Ligue 1</LeagueType>
         <LeaguePoints>52.999</LeaguePoints>
         <Distance>1468561.0</Distance>
@@ -296,7 +296,7 @@
             <Derby>0</Derby>
         </Attractiveness>
         <Budget>433.0</Budget>
-        <AreaAttractiveness>17</AreaAttractiveness>
+        <AreaAttractiveness>21</AreaAttractiveness>
         <LeagueType>Primera Divison</LeagueType>
         <LeaguePoints>98.284</LeaguePoints>
         <Distance>2001449.0</Distance>
@@ -311,7 +311,7 @@
             <Derby>1</Derby>
         </Attractiveness>
         <Budget>433.0</Budget>
-        <AreaAttractiveness>17</AreaAttractiveness>
+        <AreaAttractiveness>21</AreaAttractiveness>
         <LeagueType>Primera Divison</LeagueType>
         <LeaguePoints>98.284</LeaguePoints>
         <Distance>2001449.0</Distance>
@@ -326,7 +326,7 @@
             <Derby>1</Derby>
         </Attractiveness>
         <Budget>433.0</Budget>
-        <AreaAttractiveness>12</AreaAttractiveness>
+        <AreaAttractiveness>21</AreaAttractiveness>
         <LeagueType>Primera Divison</LeagueType>
         <LeaguePoints>98.284</LeaguePoints>
         <Distance>2569642.0</Distance>
@@ -371,7 +371,7 @@
             <Derby>1</Derby>
         </Attractiveness>
         <Budget>646.0</Budget>
-        <AreaAttractiveness>2261</AreaAttractiveness>
+        <AreaAttractiveness>32</AreaAttractiveness>
         <LeagueType>Premier League</LeagueType>
         <LeaguePoints>72.391</LeaguePoints>
         <Distance>1726569.0</Distance>
@@ -386,7 +386,7 @@
             <Derby>1</Derby>
         </Attractiveness>
         <Budget>646.0</Budget>
-        <AreaAttractiveness>22631</AreaAttractiveness>
+        <AreaAttractiveness>15</AreaAttractiveness>
         <LeagueType>Premier League</LeagueType>
         <LeaguePoints>72.391</LeaguePoints>
         <Distance>1382860.0</Distance>
@@ -401,7 +401,7 @@
             <Derby>0</Derby>
         </Attractiveness>
         <Budget>646.0</Budget>
-        <AreaAttractiveness>22631</AreaAttractiveness>
+        <AreaAttractiveness>15</AreaAttractiveness>
         <LeagueType>Premier League</LeagueType>
         <LeaguePoints>72.391</LeaguePoints>
         <Distance>1382860.0</Distance>
@@ -416,7 +416,7 @@
             <Derby>1</Derby>
         </Attractiveness>
         <Budget>646.0</Budget>
-        <AreaAttractiveness>22631</AreaAttractiveness>
+        <AreaAttractiveness>15</AreaAttractiveness>
         <LeagueType>Premier League</LeagueType>
         <LeaguePoints>72.391</LeaguePoints>
         <Distance>1382860.0</Distance>
@@ -431,7 +431,7 @@
             <Derby>1</Derby>
         </Attractiveness>
         <Budget>646.0</Budget>
-        <AreaAttractiveness>11</AreaAttractiveness>
+        <AreaAttractiveness>15</AreaAttractiveness>
         <LeagueType>Premier League</LeagueType>
         <LeaguePoints>72.391</LeaguePoints>
         <Distance>1382860.0</Distance>
@@ -446,7 +446,7 @@
             <Derby>0</Derby>
         </Attractiveness>
         <Budget>646.0</Budget>
-        <AreaAttractiveness>11</AreaAttractiveness>
+        <AreaAttractiveness>15</AreaAttractiveness>
         <LeagueType>Premier League</LeagueType>
         <LeaguePoints>72.391</LeaguePoints>
         <Distance>1382860.0</Distance>
@@ -461,7 +461,7 @@
             <Derby>1</Derby>
         </Attractiveness>
         <Budget>646.0</Budget>
-        <AreaAttractiveness>22631</AreaAttractiveness>
+        <AreaAttractiveness>15</AreaAttractiveness>
         <LeagueType>Premier League</LeagueType>
         <LeaguePoints>72.391</LeaguePoints>
         <Distance>1382860.0</Distance>
@@ -476,7 +476,7 @@
             <Derby>0</Derby>
         </Attractiveness>
         <Budget>206.0</Budget>
-        <AreaAttractiveness>14</AreaAttractiveness>
+        <AreaAttractiveness>24</AreaAttractiveness>
         <LeagueType>Premier League</LeagueType>
         <LeaguePoints>48.732</LeaguePoints>
         <Distance>1510027.0</Distance>
@@ -491,7 +491,7 @@
             <Derby>1</Derby>
         </Attractiveness>
         <Budget>206.0</Budget>
-        <AreaAttractiveness>20</AreaAttractiveness>
+        <AreaAttractiveness>43</AreaAttractiveness>
         <LeagueType>Premier League</LeagueType>
         <LeaguePoints>48.732</LeaguePoints>
         <Distance>1591028.0</Distance>
@@ -506,7 +506,7 @@
             <Derby>0</Derby>
         </Attractiveness>
         <Budget>206.0</Budget>
-        <AreaAttractiveness>20</AreaAttractiveness>
+        <AreaAttractiveness>43</AreaAttractiveness>
         <LeagueType>Premier League</LeagueType>
         <LeaguePoints>48.732</LeaguePoints>
         <Distance>1591028.0</Distance>
@@ -521,7 +521,7 @@
             <Derby>0</Derby>
         </Attractiveness>
         <Budget>246.0</Budget>
-        <AreaAttractiveness>20</AreaAttractiveness>
+        <AreaAttractiveness>22</AreaAttractiveness>
         <LeagueType>Super Lig</LeagueType>
         <LeaguePoints>36.8</LeaguePoints>
         <Distance>2040171.0</Distance>
@@ -536,7 +536,7 @@
             <Derby>1</Derby>
         </Attractiveness>
         <Budget>246.0</Budget>
-        <AreaAttractiveness>20</AreaAttractiveness>
+        <AreaAttractiveness>22</AreaAttractiveness>
         <LeagueType>Super Lig</LeagueType>
         <LeaguePoints>36.8</LeaguePoints>
         <Distance>2040171.0</Distance>
@@ -551,7 +551,7 @@
             <Derby>0</Derby>
         </Attractiveness>
         <Budget>246.0</Budget>
-        <AreaAttractiveness>20</AreaAttractiveness>
+        <AreaAttractiveness>29</AreaAttractiveness>
         <LeagueType>Super Lig</LeagueType>
         <LeaguePoints>36.8</LeaguePoints>
         <Distance>2040171.0</Distance>
@@ -582,7 +582,7 @@
             <Derby>1</Derby>
         </Attractiveness>
         <Budget>293.0</Budget>
-        <AreaAttractiveness>7</AreaAttractiveness>
+        <AreaAttractiveness>9</AreaAttractiveness>
         <LeagueType>Primeira Liga</LeagueType>
         <LeaguePoints>48.999</LeaguePoints>
         <Distance>2878643.0</Distance>
@@ -597,7 +597,7 @@
             <Derby>1</Derby>
         </Attractiveness>
         <Budget>293.0</Budget>
-        <AreaAttractiveness>18</AreaAttractiveness>
+        <AreaAttractiveness>25</AreaAttractiveness>
         <LeagueType>Primeira Liga</LeagueType>
         <LeaguePoints>48.999</LeaguePoints>
         <Distance>3029776.0</Distance>
@@ -615,7 +615,7 @@
             <Derby>0</Derby>
         </Attractiveness>
         <Budget>434.8</Budget>
-        <AreaAttractiveness>0</AreaAttractiveness>
+        <AreaAttractiveness>25</AreaAttractiveness>
         <LeagueType>Europe League</LeagueType>
         <LeaguePoints>100.9692</LeaguePoints>
         <Distance>1636512.0</Distance>
@@ -631,7 +631,7 @@
             <Derby>0</Derby>
         </Attractiveness>
         <Budget>172.0</Budget>
-        <AreaAttractiveness>0</AreaAttractiveness>
+        <AreaAttractiveness>25</AreaAttractiveness>
         <LeagueType>Europe League</LeagueType>
         <LeaguePoints>54.7392</LeaguePoints>
         <Distance>1608762.0</Distance>
@@ -647,7 +647,7 @@
             <Derby>0</Derby>
         </Attractiveness>
         <Budget>336.0</Budget>
-        <AreaAttractiveness>0</AreaAttractiveness>
+        <AreaAttractiveness>2</AreaAttractiveness>
         <LeagueType>Europe League</LeagueType>
         <LeaguePoints>25.2012</LeaguePoints>
         <Distance>72667.0</Distance>
@@ -663,7 +663,7 @@
             <Derby>0</Derby>
         </Attractiveness>
         <Budget>457.79999999999995</Budget>
-        <AreaAttractiveness>0</AreaAttractiveness>
+        <AreaAttractiveness>13</AreaAttractiveness>
         <LeagueType>Europe League</LeagueType>
         <LeaguePoints>102.405</LeaguePoints>
         <Distance>2872645.0</Distance>
@@ -697,7 +697,7 @@
             <Derby>0</Derby>
         </Attractiveness>
         <Budget>349.5</Budget>
-        <AreaAttractiveness>14</AreaAttractiveness>
+        <AreaAttractiveness>18</AreaAttractiveness>
         <LeagueType>Champions League</LeagueType>
         <LeaguePoints>73.12425</LeaguePoints>
         <Distance>347324.0</Distance>
@@ -712,7 +712,7 @@
             <Derby>0</Derby>
         </Attractiveness>
         <Budget>349.5</Budget>
-        <AreaAttractiveness>20</AreaAttractiveness>
+        <AreaAttractiveness>42</AreaAttractiveness>
         <LeagueType>Champions League</LeagueType>
         <LeaguePoints>31.5015</LeaguePoints>
         <Distance>328915.0</Distance>
@@ -727,7 +727,7 @@
             <Derby>0</Derby>
         </Attractiveness>
         <Budget>769.5</Budget>
-        <AreaAttractiveness>20</AreaAttractiveness>
+        <AreaAttractiveness>32</AreaAttractiveness>
         <LeagueType>Champions League</LeagueType>
         <LeaguePoints>128.00625000000002</LeaguePoints>
         <Distance>1726569.0</Distance>
@@ -742,7 +742,7 @@
             <Derby>0</Derby>
         </Attractiveness>
         <Budget>355.5</Budget>
-        <AreaAttractiveness>19</AreaAttractiveness>
+        <AreaAttractiveness>25</AreaAttractiveness>
         <LeagueType>Champions League</LeagueType>
         <LeaguePoints>131.0865</LeaguePoints>
         <Distance>774411.0</Distance>
@@ -757,9 +757,100 @@
             <Derby>0</Derby>
         </Attractiveness>
         <Budget>355.5</Budget>
-        <AreaAttractiveness>0</AreaAttractiveness>
+        <AreaAttractiveness>26</AreaAttractiveness>
         <LeagueType>Champions League</LeagueType>
         <LeaguePoints>111.66675000000001</LeaguePoints>
         <Distance>719896.0</Distance>
+    </SportingEvent>
+<!--    INNE DYSCYPLINY                 -->
+    <!-- ATRAKCYJNOSC -> 	0.8270278920465777 -->
+    <SportingEvent away="Cucine Lube Civitanova" home="PGE Skra Bełchatów">
+        <Attractiveness>
+            <FormHome>WWLLW</FormHome>
+            <FormAway>WLWWL</FormAway>
+            <Importance>2</Importance>
+            <Position>0</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>327</Budget>
+        <AreaAttractiveness>2</AreaAttractiveness>
+        <LeagueType>Volleyball</LeagueType>
+        <LeaguePoints>70</LeaguePoints>
+        <Distance>192240.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.8270278920465777 -->
+    <SportingEvent away="Biełogorie Biełgorod" home="ZAKSA Kędzierzyn-Koźle">
+        <Attractiveness>
+            <FormHome>WLWWW</FormHome>
+            <FormAway>LWWLW</FormAway>
+            <Importance>2</Importance>
+            <Position>0</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>327</Budget>
+        <AreaAttractiveness>2</AreaAttractiveness>
+        <LeagueType>Volleyball</LeagueType>
+        <LeaguePoints>70</LeaguePoints>
+        <Distance>131221.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.8270278920465777 -->
+    <SportingEvent away="Telekom Veszprem" home="FC Barcelona Lassa">
+        <Attractiveness>
+            <FormHome>WLLWW</FormHome>
+            <FormAway>DWLLW</FormAway>
+            <Importance>2</Importance>
+            <Position>0</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>327</Budget>
+        <AreaAttractiveness>21</AreaAttractiveness>
+        <LeagueType>Handball</LeagueType>
+        <LeaguePoints>70</LeaguePoints>
+        <Distance>2001449.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.8270278920465777 -->
+    <SportingEvent away="Vardar Skopje" home="Paris Saint-Germain HB">
+        <Attractiveness>
+            <FormHome>WLDLW</FormHome>
+            <FormAway>LDWWW</FormAway>
+            <Importance>2</Importance>
+            <Position>0</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>327</Budget>
+        <AreaAttractiveness>18</AreaAttractiveness>
+        <LeagueType>Handball</LeagueType>
+        <LeaguePoints>70</LeaguePoints>
+        <Distance>1285009.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.8270278920465777 -->
+    <SportingEvent away="Olympiakos" home="Fenerbahce">
+        <Attractiveness>
+            <FormHome>WLDLW</FormHome>
+            <FormAway>WLLDW</FormAway>
+            <Importance>2</Importance>
+            <Position>0</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>327</Budget>
+        <AreaAttractiveness>29</AreaAttractiveness>
+        <LeagueType>Euroliga</LeagueType>
+        <LeaguePoints>70</LeaguePoints>
+        <Distance>2040171.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.8270278920465777 -->
+    <SportingEvent away="CSKA Moskwa" home="Real Madryt">
+        <Attractiveness>
+            <FormHome>LWWLD</FormHome>
+            <FormAway>WLLWW</FormAway>
+            <Importance>2</Importance>
+            <Position>0</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>327</Budget>
+        <AreaAttractiveness>21</AreaAttractiveness>
+        <LeagueType>Euroliga</LeagueType>
+        <LeaguePoints>70</LeaguePoints>
+        <Distance>2569642.0</Distance>
     </SportingEvent>
 </Sport>

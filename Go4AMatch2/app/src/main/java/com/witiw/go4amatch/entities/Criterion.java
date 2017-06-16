@@ -50,4 +50,6 @@ public abstract class Criterion {
     protected double function(double arg1, double arg2) {
         return arg1 > arg2 ? 1 : 0;
     }
+
+
 }

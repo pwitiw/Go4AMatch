@@ -171,8 +171,6 @@ public class SportingEvent {
         public SportingEvent build() {
             return new SportingEvent(teams, budget, distance, leaguePoints, leagueType, areaAttractiveness, attractiveness);
         }
-
-
     }
 
     public static Comparator<SportingEvent> Comparator = new Comparator<SportingEvent>() {
@@ -183,6 +181,18 @@ public class SportingEvent {
         }
 
     };
+
+    public String toFormShortString() {
+        return "& " + teams.getHome() + "    & " + teams.getAway() + "    & " + leagueType.kindOfSport() + "\\\\\n";
+    }
+
+    public String toFormLongString() {
+        return "& " + teams.getHome() + "    & " + teams.getAway() + "    & " + (int)(getAttractiveness().getValue()*100) + "\\%    & " + (int) distance / 1000 + "km    & " + leagueType.kindOfSport() + "\\\\\n";
+    }
+
+    public String toVersusString() {
+        return teams.getHome() + " - " + teams.getAway() + "\n";
+    }
 
     @Override
     public String toString() {

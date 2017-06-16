@@ -13,11 +13,15 @@ public enum LeagueType {
     ITALY(69.998, "Serie A", "sr:tournament:23"),
     FRANCE(52.999, "Ligue 1", "sr:tournament:34"),
     PORTUGAL(48.999, "Primeira Liga", "sr:tournament:238"),
-    RUSSIA(48.732, "Premier League", "sr:tournament:203"),
-    UKRAINE(42.233, "Premier League", "sr:tournament:218"),
+    RUSSIA(48.732, "Russia Premier League", "sr:tournament:203"),
+    UKRAINE(42.233, "Ukraine Premier League", "sr:tournament:218"),
     BELGIUM(38.400, "Pro League", "sr:tournament:38"),
     TURKEY(36.800, "Super Lig", "sr:tournament:52"),
-    OTHER(21.001, "-", "other");
+    OTHER(21.001, "-", "other"),
+    //inne dyscypliny
+    CHAMPIONS_LEAGUE_HANDBALL(70.0, "Handball Champions League", ""),
+    CHAMPIONS_LEAGUE_VOLLEYBALL(70.0, "Volleyball Champions League", ""),
+    EUROLIGA(70.0, "Euroliga Basketball", "");
 
     private double uefaCoefficient;
     private String leagueName;
@@ -55,6 +59,18 @@ public enum LeagueType {
                 return type.getUefaCoefficient();
         }
         return OTHER.getUefaCoefficient();
+    }
+
+    public String kindOfSport(){
+
+        if(this == EUROLIGA)
+            return "Koszykówka";
+        else if(this == CHAMPIONS_LEAGUE_HANDBALL)
+            return "Piłka ręczna";
+        else if(this == CHAMPIONS_LEAGUE_VOLLEYBALL)
+            return "Siatkówka";
+        else
+            return "Piłka Nożna";
     }
 
 }

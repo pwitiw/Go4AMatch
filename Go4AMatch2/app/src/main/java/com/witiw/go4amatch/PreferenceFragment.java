@@ -44,7 +44,6 @@ public class PreferenceFragment extends Fragment {
 
     PreferenceFragment(IMainPresenter presenter) {
         this.presenter = presenter;
-
     }
 
     @Override

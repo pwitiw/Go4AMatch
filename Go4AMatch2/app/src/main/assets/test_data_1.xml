@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Sport>
+    <SportingEvent away="Club Brugge" home="RSC Anderlecht">
+        <Attractiveness>
+            <FormHome>DWDWW</FormHome>
+            <FormAway>WWDLW</FormAway>
+            <Importance>2</Importance>
+            <Position>1</Position>
+            <Derby>1</Derby>
+        </Attractiveness>
+        <Budget>401.0</Budget>
+        <AreaAttractiveness>24</AreaAttractiveness>
+        <LeagueType>Pro League</LeagueType>
+        <LeaguePoints>38.4</LeaguePoints>
+        <Distance>1051367.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.0 -->
+    <SportingEvent away="Olympique Lyon" home="Paris Saint-Germain">
+        <Attractiveness>
+            <FormHome>WLWWD</FormHome>
+            <FormAway>LWWWD</FormAway>
+            <Importance>1</Importance>
+            <Position>2</Position>
+            <Derby>1</Derby>
+        </Attractiveness>
+        <Budget>431.0</Budget>
+        <AreaAttractiveness>18</AreaAttractiveness>
+        <LeagueType>Ligue 1</LeagueType>
+        <LeaguePoints>52.999</LeaguePoints>
+        <Distance>1285009.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.0 -->
+    <SportingEvent away="FC Dynamo Kiev" home="FC Shakhtar Donetsk">
+        <Attractiveness>
+            <FormHome>WWDLD</FormHome>
+            <FormAway>WLLWW</FormAway>
+            <Importance>2</Importance>
+            <Position>1</Position>
+            <Derby>1</Derby>
+        </Attractiveness>
+        <Budget>171.0</Budget>
+        <AreaAttractiveness>25</AreaAttractiveness>
+        <LeagueType>Ukraine Premier League</LeagueType>
+        <LeaguePoints>42.233</LeaguePoints>
+        <Distance>1608762.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.0 -->
+    <SportingEvent away="Borussia Dortmund" home="Bayern Munich">
+        <Attractiveness>
+            <FormHome>DWWWW</FormHome>
+            <FormAway>WDWDW</FormAway>
+            <Importance>2</Importance>
+            <Position>2</Position>
+            <Derby>1</Derby>
+        </Attractiveness>
+        <Budget>326.0</Budget>
+        <AreaAttractiveness>26</AreaAttractiveness>
+        <LeagueType>Bundesliga</LeagueType>
+        <LeaguePoints>76.498</LeaguePoints>
+        <Distance>719896.0</Distance>
+    </SportingEvent>
+
+    <SportingEvent away="Juventus Turin" home="SSC Napoli">
+        <Attractiveness>
+            <FormHome>WWWWW</FormHome>
+            <FormAway>DDLWW</FormAway>
+            <Importance>2</Importance>
+            <Position>2</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>417.0</Budget>
+        <AreaAttractiveness>35</AreaAttractiveness>
+        <LeagueType>Serie A</LeagueType>
+        <LeaguePoints>69.998</LeaguePoints>
+        <Distance>1835971.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.0 -->
+    <SportingEvent away="AS Monaco" home="FC Metz">
+        <Attractiveness>
+            <FormHome>LWWDL</FormHome>
+            <FormAway>WWWWW</FormAway>
+            <Importance>1</Importance>
+            <Position>13</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>431.0</Budget>
+        <AreaAttractiveness>15</AreaAttractiveness>
+        <LeagueType>Ligue 1</LeagueType>
+        <LeaguePoints>52.999</LeaguePoints>
+        <Distance>959922.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.0 -->
+    <SportingEvent home="Atletico Madrid" away="Real Madrid">
+    <Attractiveness>
+    <FormHome>LWWDW</FormHome>
+    <FormAway>WWWWW</FormAway>
+    <Importance>2</Importance>
+    <Position>2</Position>
+    <Derby>1</Derby>
+    </Attractiveness>
+    <Budget>433.0</Budget >
+    <AreaAttractiveness>21</AreaAttractiveness>
+    <LeagueType>Primera Divison</LeagueType>
+    <LeaguePoints>98.284</LeaguePoints>
+    <Distance>2569642.0</Distance>
+    </SportingEvent>
+     ATRAKCYJNOSC -> 	0.0
+    <SportingEvent home="West Ham United" away="Bournemouth AFC">
+    <Attractiveness>
+    <FormHome>DDWLW</FormHome>
+    <FormAway>WWDWD</FormAway>
+    <Importance>0</Importance>
+    <Position>2</Position>
+    <Derby>0</Derby>
+    </Attractiveness>
+    <Budget>646.0</Budget >
+    <AreaAttractiveness>15</AreaAttractiveness>
+    <LeagueType>Premier League</LeagueType>
+    <LeaguePoints>72.391</LeaguePoints>
+    <Distance>1382860.0</Distance>
+    </SportingEvent>
+
+    <SportingEvent home="FC Barcelona Lassa" away="Telekom Veszprem">
+        <Attractiveness>
+            <FormHome>WLLWW</FormHome>
+            <FormAway>DWLLW</FormAway>
+            <Importance>2</Importance>
+            <Position>0</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>327.0</Budget >
+        <AreaAttractiveness>21</AreaAttractiveness>
+        <LeagueType>Handball Champions League</LeagueType>
+        <LeaguePoints>70.0</LeaguePoints>
+        <Distance>2001449.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.0 -->
+    <SportingEvent home="Athletic Bilbao" away="FC Barcelona">
+        <Attractiveness>
+            <FormHome>WWLDL</FormHome>
+            <FormAway>WWWWW</FormAway>
+            <Importance>1</Importance>
+            <Position>5</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>433.0</Budget >
+        <AreaAttractiveness>17</AreaAttractiveness>
+        <LeagueType>Primera Divison</LeagueType>
+        <LeaguePoints>98.284</LeaguePoints>
+        <Distance>2213857.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.0 -->
+    <SportingEvent away="FC Dynamo Kiev" home="Karpaty Lviv">
+        <Attractiveness>
+            <FormHome>LWLWW</FormHome>
+            <FormAway>WLLWW</FormAway>
+            <Importance>2</Importance>
+            <Position>3</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>171.0</Budget>
+        <AreaAttractiveness>60</AreaAttractiveness>
+        <LeagueType>Ukraine Premier League</LeagueType>
+        <LeaguePoints>42.233</LeaguePoints>
+        <Distance>595838.0</Distance>
+    </SportingEvent>
+
+    <!-- ATRAKCYJNOSC -> 	0.0 -->
+    <SportingEvent home="Fenerbahce" away="Olympiakos">
+        <Attractiveness>
+            <FormHome>WLDLW</FormHome>
+            <FormAway>WLLDW</FormAway>
+            <Importance>2</Importance>
+            <Position>0</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>327.0</Budget >
+        <AreaAttractiveness>29</AreaAttractiveness>
+        <LeagueType>Euroliga Basketball</LeagueType>
+        <LeaguePoints>70.0</LeaguePoints>
+        <Distance>2040171.0</Distance>
+    </SportingEvent>
+
+    <!--&lt;!&ndash; ATRAKCYJNOSC -> 	0.0 &ndash;&gt;-->
+    <!--<SportingEvent home="Tottenham Hotspur" away="Crystal Palace">-->
+        <!--<Attractiveness>-->
+            <!--<FormHome>WLWWW</FormHome>-->
+            <!--<FormAway>LLLWL</FormAway>-->
+            <!--<Importance>1</Importance>-->
+            <!--<Position>12</Position>-->
+            <!--<Derby>1</Derby>-->
+        <!--</Attractiveness>-->
+        <!--<Budget>646.0</Budget >-->
+        <!--<AreaAttractiveness>15</AreaAttractiveness>-->
+        <!--<LeagueType>Premier League</LeagueType>-->
+        <!--<LeaguePoints>72.391</LeaguePoints>-->
+        <!--<Distance>1382860.0</Distance>-->
+    <!--</SportingEvent>-->
+    <!-- ATRAKCYJNOSC -> 	0.0 -->
+    <SportingEvent home="Arsenal FC" away="Tottenham Hotspur">
+        <Attractiveness>
+            <FormHome>WWWWW</FormHome>
+            <FormAway>WLWWW</FormAway>
+            <Importance>1</Importance>
+            <Position>3</Position>
+            <Derby>1</Derby>
+        </Attractiveness>
+        <Budget>646.0</Budget >
+        <AreaAttractiveness>15</AreaAttractiveness>
+        <LeagueType>Premier League</LeagueType>
+        <LeaguePoints>72.391</LeaguePoints>
+        <Distance>1382860.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.0 -->
+    <SportingEvent home="FC Spartak Moscow" away="CSKA Moscow">
+        <Attractiveness>
+            <FormHome>WWWWL</FormHome>
+            <FormAway>LWWWW</FormAway>
+            <Importance>2</Importance>
+            <Position>1</Position>
+            <Derby>1</Derby>
+        </Attractiveness>
+        <Budget>206.0</Budget >
+        <AreaAttractiveness>43</AreaAttractiveness>
+        <LeagueType>Premier League</LeagueType>
+        <LeaguePoints>48.732</LeaguePoints>
+        <Distance>1591028.0</Distance>
+    </SportingEvent>
+    <!-- ATRAKCYJNOSC -> 	0.0 -->
+    <SportingEvent home="PGE Skra Bełchatów" away="Cucine Lube Civitanova">
+        <Attractiveness>
+            <FormHome>WWLLW</FormHome>
+            <FormAway>WLWWL</FormAway>
+            <Importance>2</Importance>
+            <Position>0</Position>
+            <Derby>0</Derby>
+        </Attractiveness>
+        <Budget>327.0</Budget >
+        <AreaAttractiveness>2</AreaAttractiveness>
+        <LeagueType>Volleyball Champions League</LeagueType>
+        <LeaguePoints>70.0</LeaguePoints>
+        <Distance>192240.0</Distance>
+    </SportingEvent>
+
+
+
+</Sport>

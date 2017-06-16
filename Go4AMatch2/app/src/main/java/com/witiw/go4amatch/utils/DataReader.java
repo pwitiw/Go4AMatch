@@ -29,15 +29,13 @@ import weka.core.Instances;
 public class DataReader {
 
     private static Context APP_CONTEXT;
-    private static final String TEST_DATA_FILE_NAME = "test_data.xml";
-    private static final String TRAINING_DATA_FILE_NAME = "training_data_bayes.arff";
 
-    public static Document readTestData() {
+    public static Document readTestData(String filename) {
         Document doc = null;
         try {
             DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
-             doc = docBuilder.parse(APP_CONTEXT.getAssets().open(TEST_DATA_FILE_NAME));
+             doc = docBuilder.parse(APP_CONTEXT.getAssets().open(filename));
             doc.getDocumentElement().normalize();
         } catch (SAXException e) {
             e.printStackTrace();
@@ -52,7 +50,7 @@ public class DataReader {
     public static Instances readTrainingData() {
         Instances data = null;
         try {
-            InputStream inputStream = APP_CONTEXT.getAssets().open(TRAINING_DATA_FILE_NAME);
+            InputStream inputStream = APP_CONTEXT.getAssets().open(AppProperties.TRAINING_DATA_FILE_NAME);
             BufferedReader reader =
                     new BufferedReader(new InputStreamReader(inputStream,"UTF-8"));
             data = new Instances(reader);

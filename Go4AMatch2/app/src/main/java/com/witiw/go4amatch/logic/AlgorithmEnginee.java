@@ -8,11 +8,14 @@ import com.witiw.go4amatch.entities.Criterion;
 import com.witiw.go4amatch.entities.LeagueType;
 import com.witiw.go4amatch.entities.SportingEvent;
 import com.witiw.go4amatch.logic.ahp.AHPAlgorithm;
+import com.witiw.go4amatch.logic.ahp.InconsistentConsistentMatrixException;
 import com.witiw.go4amatch.logic.classifier.BayesClassifier;
 import com.witiw.go4amatch.logic.promethee.PrometheeAlgorithm;
 import com.witiw.go4amatch.logic.services.FormService;
 import com.witiw.go4amatch.rest.impl.GoogleRestService;
 import com.witiw.go4amatch.rest.impl.SportRadarRestService;
+import com.witiw.go4amatch.utils.AppProperties;
+import com.witiw.go4amatch.utils.ListPrinter;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -49,11 +52,11 @@ public class AlgorithmEnginee extends AsyncTask<Criterion, Void, List<SportingEv
     @Override
     protected List<SportingEvent> doInBackground(Criterion... params) {
         List<SportingEvent> events = new ArrayList<>();
+
         try {
+            testGooglePlaces();
             bayesClassifier = new BayesClassifier();
             events = run(Arrays.asList(params));
-            printResults(null, events, null);
-//            events = prepareTestData(Arrays.asList(params));
         } catch (Exception e) {
             if (e instanceof IllegalArgumentException)
                 succesFlag = 2;
@@ -61,22 +64,38 @@ public class AlgorithmEnginee extends AsyncTask<Criterion, Void, List<SportingEv
                 succesFlag = 1;
             }
             e.printStackTrace();
+        } catch (InconsistentConsistentMatrixException e) {
+            succesFlag = 1;
         }
-
         return events;
     }
 
-    public List<SportingEvent> run(List<Criterion> criteria) throws Exception {
+    private List<SportingEvent> processDataFromServer(LeagueType leagueType) throws Exception {
+        return dataProcessingService.getSportingEventsForLeague(leagueType);
+    }
+
+    private List<SportingEvent> processDataFromXml() throws Exception {
+        return dataProcessingService.processDataFromXmlFile(AppProperties.TEST_DATA_FILE_NAME);
+    }
+
+    public List<SportingEvent> run(List<Criterion> criteria) throws Exception, InconsistentConsistentMatrixException {
+
         ahpAlgorithm.compute(criteria);
         bayesClassifier = new BayesClassifier();
         // FROM SERVER
-//        List<SportingEvent> events = dataProcessingService.getSportingEventsForLeague(LeagueType.UKRAINE);
+//        List<SportingEvent> events = processDataFromServer(LeagueType.UKRAINE);
         // FROM XML
-        List<SportingEvent> events = dataProcessingService.processDataFromXmlFile();
+//    todo normalnie    List<SportingEvent> events = processDataFromXml();
+        //na rzecz testow
+        List<SportingEvent> events = formTesting(dataProcessingService);
+        List<SportingEvent> defaultEvents = new ArrayList<>(events);
         classifyAttractiveness(events);
         prometheeAlgorithm.calculateRanking(criteria, events);
-        Log.i("#CALL NUMBERS", String.valueOf(GoogleRestService.GOOGLE_REST_SERVICE_COUNTER + SportRadarRestService.SPORT_RADAR_REST_SERVICE_COUNTER));
-        return events;
+        //todo normalnie return events;
+        //na rzecz testów
+        ListPrinter.printResults(defaultEvents, events);
+
+        return events.subList(0, 5);
     }
 
     @Override
@@ -142,4 +161,21 @@ public class AlgorithmEnginee extends AsyncTask<Criterion, Void, List<SportingEv
         }
         Log.i("League:\t" + leagueType.getLeagueName() + "\tCriterion:\t" + criterion.getName() + "\n", "\n" + logBuilder.toString() + "\n");
     }
+
+    private void testGooglePlaces() throws Exception {
+        String city = mainPresenter.getLocation();
+        if (city.equals(""))
+            return;
+        int result = GoogleRestService.getAttractionsForCity(city);
+        Log.i(city, String.valueOf(result));
+    }
+
+    private List<SportingEvent> formTesting(DataProcessingService dataProcessingService) throws Exception {
+
+        if (mainPresenter.getLocation().equals(""))
+            return dataProcessingService.processDataFromXmlFile(AppProperties.SPORTING_EVENTS_LIST_1);
+        else
+            return dataProcessingService.processDataFromXmlFile(AppProperties.SPORTING_EVENTS_LIST_2);
+    }
+
 }

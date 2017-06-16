@@ -9,6 +9,8 @@ import com.witiw.go4amatch.entities.Criterion;
  */
 public class DistanceCriterion extends Criterion {
 
+    private double TRESHOLD = 200.0;
+
     public DistanceCriterion(Importance importance) {
         super("Odległość", importance);
     }
@@ -22,8 +24,15 @@ public class DistanceCriterion extends Criterion {
         return function(event1.getDistance(), event2.getDistance());
     }
 
+    //  V preference function
     @Override
     protected double function(double arg1, double arg2) {
-        return arg1 - arg2 >= 0 ? 0 : 1;
+        double d = arg2 - arg1;
+        if (d <= 0)
+            return 0;
+        if (d > 0 && d < TRESHOLD)
+            return d / TRESHOLD;
+        else
+            return 1;
     }
 }

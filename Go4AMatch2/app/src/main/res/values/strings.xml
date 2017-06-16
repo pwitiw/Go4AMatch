@@ -4,7 +4,7 @@
     <!--Fragment Inputs Strings-->
     <string name="preferences_mode">Preferencje</string>
     <string name="map_mode">Mapa</string>
-    <string name="list_mode">Lista</string>
+    <string name="list_mode">Lista meczy</string>
     <string name="location">Lokalizacja</string>
     <string name="search">Szukaj</string>
     <string name="budget">Budżet</string>

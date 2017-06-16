@@ -16,13 +16,15 @@ public class AHPAlgorithm {
     public AHPAlgorithm() {
     }
 
-    public void compute(List<Criterion> criteria) {
-        criteriaMatrix = setDownCriteriaMatrix(criteria);
+    public void compute(List<Criterion> criteria) throws InconsistentConsistentMatrixException {
+        criteriaMatrix = computeCriteriaMatrix(criteria);
         double[] sums = getColumnSums(criteriaMatrix);
         criteriaMatrix = matrixNormalization(criteriaMatrix, sums);
         double[] weights = computeWeights(criteriaMatrix);
         if (isConsistent(weights, sums))
             assignCriteria(criteria, weights);
+        else
+            throw new InconsistentConsistentMatrixException();
     }
 
     private void assignCriteria(List<Criterion> criteria, double[] weights) {
@@ -31,7 +33,7 @@ public class AHPAlgorithm {
         }
     }
 
-    private double[][] setDownCriteriaMatrix(List<Criterion> criteria) {
+    private double[][] computeCriteriaMatrix(List<Criterion> criteria) {
         double[][] matrix = getInitializedMatrix(criteria.size());
         for (int i = 0; i < matrix.length; i++) {
             for (int j = i; j < matrix[i].length; j++) {

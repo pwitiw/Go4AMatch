@@ -84,11 +84,10 @@ public class FactoryClass {
         }
     }
 
-    private void cacheAreaAttractiveness(SportEvent event) throws IOException {
+    private void cacheAreaAttractiveness(SportEvent event) throws Exception {
         String homeCity = teamMap.get(event.getHomeTeam().getId()).getCity();
         if (!areaAttractivenessMap.containsKey(homeCity)) {
-            String destination = homeCity.replace(" ", "+");
-            int areaAttractiveness = GoogleRestService.getAttractionsForCity(destination);
+            int areaAttractiveness = GoogleRestService.getAttractionsForCity(homeCity);
             areaAttractivenessMap.put(homeCity, areaAttractiveness);
         }
     }

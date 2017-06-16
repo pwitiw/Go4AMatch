@@ -17,6 +17,7 @@ import com.witiw.go4amatch.rest.api.sportradar.gameschedule.SportEvent;
 import com.witiw.go4amatch.rest.api.sportradar.gameschedule.TournamentSchedule;
 import com.witiw.go4amatch.rest.api.sportradar.leaguetable.TournamentStandings;
 import com.witiw.go4amatch.rest.impl.SportRadarRestService;
+import com.witiw.go4amatch.utils.AppProperties;
 import com.witiw.go4amatch.utils.DataReader;
 import com.witiw.go4amatch.utils.XmlPojoConverter;
 
@@ -100,8 +101,8 @@ public class DataProcessingService {
                 .build();
     }
 
-    public List<SportingEvent> processDataFromXmlFile() {
-        Document testDataDoc = DataReader.readTestData();
+    public List<SportingEvent> processDataFromXmlFile(String fileName) {
+        Document testDataDoc = DataReader.readTestData(fileName);
         if (testDataDoc == null || testDataDoc == null)
             throw new RuntimeException();
         return XmlPojoConverter.convert(testDataDoc);

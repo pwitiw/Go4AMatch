@@ -37,6 +37,9 @@ public class ResultAdapter extends ArrayAdapter<SportingEvent> {
             view = inflater.inflate(R.layout.result_row, null);
 
         SportingEvent event = getItem(pos);
+        //todo testy
+        TextView leagueType = (TextView) view.findViewById(R.id.tvLeagueType);
+        leagueType.setText(event.getLeagueType().getLeagueName());
 
         TextView homeTeam = (TextView) view.findViewById(R.id.tvTeamHome);
         TextView awayTeam = (TextView) view.findViewById(R.id.tvTeamAway);
@@ -46,6 +49,12 @@ public class ResultAdapter extends ArrayAdapter<SportingEvent> {
             image.setImageResource(R.drawable.champions_league);
         } else if (event.getLeagueType().equals(LeagueType.EUROPE)) {
             image.setImageResource(R.drawable.europa_league);
+        } else if (event.getLeagueType().equals(LeagueType.CHAMPIONS_LEAGUE_VOLLEYBALL)) {
+            image.setImageResource(R.drawable.championsleague_volleyball);
+        } else if (event.getLeagueType().equals(LeagueType.CHAMPIONS_LEAGUE_HANDBALL)) {
+            image.setImageResource(R.drawable.handball_championsleague);
+        }else if (event.getLeagueType().equals(LeagueType.EUROLIGA)) {
+            image.setImageResource(R.drawable.championsleague_basketball);
         } else {
             image.setImageResource(R.drawable.other);
         }
